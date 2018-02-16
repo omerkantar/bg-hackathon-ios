@@ -1,0 +1,6 @@
+framework module Pods_getir {
+  umbrella header "Pods-getir-umbrella.h"
+
+  export *
+  module * { export * }
+}
