@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CommonTableViewCell: UITableViewCell {
 
@@ -22,7 +23,7 @@ class CommonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.selectionStyle = .none
         if let containerView = containerView {
             containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(0.2)
             containerView.layer.cornerRadius = 3.0
@@ -46,9 +47,31 @@ class CommonTableViewCell: UITableViewCell {
 
     }
     
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        
+        if let containerView = containerView {
+            var alpha: CGFloat = 0.2
+            var scale: CGFloat = 1.0
+            if highlighted {
+                // MARK: - 1989 Semih Ozturk anisina 😢
+                scale = 0.98
+                alpha = 0.89
+            }
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(alpha)
+                containerView.transform = CGAffineTransform(scaleX: scale, y: scale)
+            })
+        }
+    }
+    
     func build(viewModel: CommonCellViewModel) {
         self.viewModel = viewModel
-        
+        if let usernameLabel = usernameLabel {
+            usernameLabel.text = viewModel.usernameText
+        }
     }
 
 }

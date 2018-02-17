@@ -152,7 +152,7 @@
 		4E92F31620375C1D0020C709 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E92F3622037C8F50020C709 /* Filters */,
+				4E92F3622037C8F50020C709 /* Filter */,
 				4E92F3462037AA500020C709 /* Tabs */,
 				4E92F32B203768360020C709 /* Map */,
 				4E92F31C20375CA20020C709 /* Common */,
@@ -172,6 +172,7 @@
 		4E92F31820375C270020C709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F3722038285F0020C709 /* New Group */,
 				4E92F3332037A0120020C709 /* Cells */,
 				4E92F328203764580020C709 /* LoadingView */,
 				4E92F3692037F22A0020C709 /* BGTextField.swift */,
@@ -343,12 +344,19 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		4E92F3622037C8F50020C709 /* Filters */ = {
+		4E92F3622037C8F50020C709 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
 				4E92F3632037C9190020C709 /* FilterViewController.swift */,
 			);
-			path = Filters;
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		4E92F3722038285F0020C709 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {

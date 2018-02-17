@@ -9,11 +9,14 @@
 import UIKit
 import Moya
 
+fileprivate let kBaseUrl = "http://172.20.10.4:8080/v1"
 
 enum RequestTarget {
     case coffee
     case call(number: Int)
     case users
+    case getPacks(filter: FilterModel)
+    case getTravels(filter: FilterModel)
 }
 
 
@@ -22,7 +25,7 @@ extension RequestTarget: TargetType {
     
     var baseURL: URL {
         
-        if let url = URL(string: "http://172.20.10.4:8080/v1") {
+        if let url = URL(string: kBaseUrl) {
             return url
         }
         

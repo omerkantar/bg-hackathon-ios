@@ -10,6 +10,7 @@ import UIKit
 
 class CommonCellViewModel {
 
+    var usernameText: String?
     var directionText: String?
     
     init() {

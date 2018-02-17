@@ -9,8 +9,6 @@
 import UIKit
 
 class PackTableViewCell: CommonTableViewCell {
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

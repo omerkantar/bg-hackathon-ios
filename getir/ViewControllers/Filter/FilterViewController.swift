@@ -64,8 +64,8 @@ extension FilterViewController {
             switch delegate.filterType {
             case .pack:
                 self.dateInformationLabel.text = "Paketin gönderileceği tarihi giriniz."
-                self.fromTextField.placeholder = "Gönderilecek tarih"
-                self.toTextField.isHidden = true
+                self.startDateTextField.placeholder = "Gönderilecek tarih"
+                self.endDateTextField.isHidden = true
                 break
             case .travel:
                 self.dateInformationLabel.text = "Gezginlerin hareket ettiği tarihi ya da belirli bir tarih aralığını giriniz."
@@ -168,6 +168,7 @@ extension FilterViewController: GMSAutocompleteViewControllerDelegate {
         let name = place.name
         
         if let textField = activeTextField {
+            textField.text = name
             switch textField {
             case fromTextField:
                 self.filterModel.fromPlace = name

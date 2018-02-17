@@ -76,13 +76,6 @@ extension BaseViewController {
         }
         self.present(nc, animated: true, completion: nil)
     }
-    
-    func pushSearchPlaceVC(search: String?) {
-        let searchPlaceVC = self.storyboard?.instantiateViewController(withIdentifier: "searchPlaceVC") as! SearchPlaceViewController
-        searchPlaceVC.searchBarPlaceholder = search
-        self.navigationController?.pushViewController(searchPlaceVC, animated: true)
-        
-    }
 }
 
 // MARK: - Alert & ActionSheet
