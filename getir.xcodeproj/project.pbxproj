@@ -40,6 +40,9 @@
 		4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37420383B760020C709 /* SelectRequestViewController.swift */; };
 		4E92F3772038405E0020C709 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3762038405E0020C709 /* UIViewController.swift */; };
 		4E92F379203842C70020C709 /* RequestStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F378203842C70020C709 /* RequestStateTableViewCell.xib */; };
+		4E92F37D2038497D0020C709 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37B2038497D0020C709 /* RequestTableViewCell.swift */; };
+		4E92F37E2038497D0020C709 /* RequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */; };
+		4E92F38020384D080020C709 /* SelectRequestTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -104,6 +107,9 @@
 		4E92F37420383B760020C709 /* SelectRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestViewController.swift; sourceTree = "<group>"; };
 		4E92F3762038405E0020C709 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4E92F378203842C70020C709 /* RequestStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestStateTableViewCell.xib; sourceTree = "<group>"; };
+		4E92F37B2038497D0020C709 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
+		4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTableViewCell.xib; sourceTree = "<group>"; };
+		4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestTableViewModel.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 			children = (
 				4E92F34D2037B1AA0020C709 /* Tab */,
 				4E92F3592037C5B40020C709 /* BaseViewModel.swift */,
+				4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 		4E92F3332037A0120020C709 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F37A2038495C0020C709 /* Request */,
 				4E92F33E2037A6740020C709 /* Common */,
 				4E92F3412037A8BC0020C709 /* Travel */,
 				4E92F3392037A6580020C709 /* State */,
@@ -371,6 +379,15 @@
 				4E92F37420383B760020C709 /* SelectRequestViewController.swift */,
 			);
 			path = Selection;
+			sourceTree = "<group>";
+		};
+		4E92F37A2038495C0020C709 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F37B2038497D0020C709 /* RequestTableViewCell.swift */,
+				4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -574,6 +591,7 @@
 				4E92F3382037A0680020C709 /* PackTableViewCell.xib in Resources */,
 				4EC3D6D420375545007818D9 /* LaunchScreen.storyboard in Resources */,
 				4E92F3452037A8CD0020C709 /* TravelTableViewCell.xib in Resources */,
+				4E92F37E2038497D0020C709 /* RequestTableViewCell.xib in Resources */,
 				4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */,
 				4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */,
 			);
@@ -776,6 +794,7 @@
 				4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */,
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
+				4E92F37D2038497D0020C709 /* RequestTableViewCell.swift in Sources */,
 				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
 				4E92F3772038405E0020C709 /* UIViewController.swift in Sources */,
 				4E92F3682037F0920020C709 /* FilterModel.swift in Sources */,
@@ -786,6 +805,7 @@
 				4E92F3662037F00A0020C709 /* FilterManager.swift in Sources */,
 				4E92F324203761D10020C709 /* ResponseModel.swift in Sources */,
 				4E92F3442037A8CD0020C709 /* TravelTableViewCell.swift in Sources */,
+				4E92F38020384D080020C709 /* SelectRequestTableViewModel.swift in Sources */,
 				4E92F32A203764670020C709 /* LoadingView.swift in Sources */,
 				4E92F3522037C3190020C709 /* UserModel.swift in Sources */,
 				4E92F3372037A0680020C709 /* PackTableViewCell.swift in Sources */,

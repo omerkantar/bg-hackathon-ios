@@ -17,6 +17,8 @@ enum RequestTarget {
     case users
     case getPacks(filter: FilterModel)
     case getTravels(filter: FilterModel)
+    case getMyPacks
+    case getMyTravels
 }
 
 
@@ -69,6 +71,10 @@ extension RequestTarget: TargetType {
             return filter.parameters
         case .getTravels(let filter):
             return filter.parameters
+        case .getMyPacks, .getMyTravels:
+            if let id = UserModel.current.id {
+                return ["u": id]
+            }
         default:
             break
         }

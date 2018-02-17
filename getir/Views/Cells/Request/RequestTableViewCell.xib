@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="RequestTableViewCell" customModule="getir" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpb-GK-x58">
+                        <rect key="frame" x="8" y="8" width="270" height="60.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ankara'dan Istanbul'a  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SG-1U-gS3">
+                                <rect key="frame" x="8" y="12" width="187" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30kg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxb-2n-XpF">
+                                <rect key="frame" x="225" y="21" width="37" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw1-3Q-cR5">
+                                <rect key="frame" x="8" y="34.5" width="65.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jxb-2n-XpF" firstAttribute="centerY" secondItem="Cpb-GK-x58" secondAttribute="centerY" id="15x-ED-mC5"/>
+                            <constraint firstItem="kw1-3Q-cR5" firstAttribute="leading" secondItem="4SG-1U-gS3" secondAttribute="leading" id="8kx-c1-L8C"/>
+                            <constraint firstItem="4SG-1U-gS3" firstAttribute="top" secondItem="Cpb-GK-x58" secondAttribute="top" constant="12" id="GK2-ij-pPR"/>
+                            <constraint firstAttribute="trailing" secondItem="Jxb-2n-XpF" secondAttribute="trailing" constant="8" id="cmV-oe-964"/>
+                            <constraint firstItem="Jxb-2n-XpF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4SG-1U-gS3" secondAttribute="trailing" constant="8" id="h0L-QJ-7Ep"/>
+                            <constraint firstItem="kw1-3Q-cR5" firstAttribute="top" secondItem="4SG-1U-gS3" secondAttribute="bottom" constant="1" id="h4e-8L-7Ty"/>
+                            <constraint firstItem="4SG-1U-gS3" firstAttribute="leading" secondItem="Cpb-GK-x58" secondAttribute="leading" constant="8" id="tdO-DC-d0l"/>
+                            <constraint firstAttribute="bottom" secondItem="kw1-3Q-cR5" secondAttribute="bottom" constant="12" id="zZ0-2n-xME"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Cpb-GK-x58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6fQ-FY-scc"/>
+                    <constraint firstItem="Cpb-GK-x58" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="9nA-Z4-VVn"/>
+                    <constraint firstAttribute="bottom" secondItem="Cpb-GK-x58" secondAttribute="bottom" constant="8" id="Cqj-sC-Qph"/>
+                    <constraint firstAttribute="trailing" secondItem="Cpb-GK-x58" secondAttribute="trailing" constant="8" id="Ezi-jX-wCZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+        </tableViewCell>
+    </objects>
+</document>
