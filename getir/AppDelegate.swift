@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSPlacesClient.provideAPIKey("AIzaSyDumvZ7JgnO50YTWfdvo6JRfid2Fw2oJbQ")
         GMSServices.provideAPIKey("AIzaSyDumvZ7JgnO50YTWfdvo6JRfid2Fw2oJbQ")
-
+        window?.backgroundColor = UIColor.white
         return true
     }
 

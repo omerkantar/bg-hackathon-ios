@@ -24,7 +24,7 @@ enum RequestTarget {
     
     case createPack(pack: PackModel)
     case createTravel(travel: TravelModel)
-    case createRequest(request: ActivityStateModel)
+    case createRequest(request: ActivityModel)
     case createDeal(deal: ActivityStateModel)
     
     case putRequest(id: String, status: RequestStatusType)

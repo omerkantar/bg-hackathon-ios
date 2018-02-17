@@ -8,6 +8,7 @@ def all_pods
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
+  pod 'RNLoadingButton-Swift'
 end
 
 target 'getir' do

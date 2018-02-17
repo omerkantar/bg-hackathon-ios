@@ -21,4 +21,13 @@ extension String {
         }
         return ""
     }
+    
+    static func validation(string: String?, minCharacters: Int) -> Bool {
+        if let string = string {
+            if string.count >= minCharacters {
+                return true
+            }
+        }
+        return false
+    }
 }

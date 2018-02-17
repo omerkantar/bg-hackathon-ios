@@ -66,11 +66,16 @@ class SelectRequestViewController: BaseViewController {
     
     // MARK: - Action
     @IBAction func addButtonTapped() {
-        if self.isMyPacks {
-            
-        } else {
-            
+        
+        let nc = self.storyboard?.instantiateViewController(withIdentifier: "createActivityNC") as! UINavigationController
+        if let vc = nc.viewControllers.first as? CreateActivityViewController {
+            vc.isTravel = !self.isMyPacks
+            vc.model.from = self.selectedActivity?.from
+            vc.model.to = self.selectedActivity?.to
+            vc.model.date = self.selectedActivity?.dateText
+            self.present(nc, animated: false, completion: nil)
         }
+        
     }
 
 }
@@ -103,9 +108,28 @@ extension SelectRequestViewController: UITableViewDelegate {
 // MARK: - Load
 extension SelectRequestViewController {
     override func loadData() {
+        guard let selectedActivity = selectedActivity else {
+            return
+        }
+        
+        let views = self.tableView.subviews
+        for item in views {
+            if item is EmptyStateView {
+                item.removeFromSuperview()
+            }
+        }
+        
         request(target: self.target, loadingView: self.tableView) { (responseModel) in
-            self.viewModel.build(responseModel: responseModel)
+            self.viewModel.build(responseModel: responseModel, selectedActivity: selectedActivity)
             self.tableView.reloadData()
+            
+            if self.viewModel.cellVMs!.count == 0 {
+                if let title = self.title {
+                    let _ = EmptyStateView.show(information: title + " Bulunamadı isterseniz ekleyebilirsiniz.", parentView: self.tableView)
+                    
+
+                }
+            }
         }
     }
 }

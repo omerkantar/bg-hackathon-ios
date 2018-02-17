@@ -258,7 +258,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBL-62-ZUn">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-rV-bgF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-rV-bgF" customClass="RNLoadingButton" customModule="RNLoadingButton_Swift">
                                         <rect key="frame" x="129" y="14" width="116" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
@@ -474,7 +474,7 @@
         <!--Create Activity View Controller-->
         <scene sceneID="15G-gD-D0z">
             <objects>
-                <viewController id="CZu-UO-nMZ" customClass="CreateActivityViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createActivityVC" id="CZu-UO-nMZ" customClass="CreateActivityViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9m3-n1-Afl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,7 +581,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mJk-0p-5Nt"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ODD-74-fX8"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ODD-74-fX8">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="CZT-uj-Dhl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xt8-90-yRx">
+                                <rect key="frame" x="16" y="5.5" width="83" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Kapat"/>
+                                <connections>
+                                    <action selector="dismissButtonTapped" destination="CZu-UO-nMZ" eventType="touchUpInside" id="QEa-HY-SEQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="createButton" destination="L4q-z5-tX4" id="tRq-4G-aMx"/>
                         <outlet property="dateTextField" destination="6hq-pU-7y0" id="6uf-aQ-IaH"/>
