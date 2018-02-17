@@ -9,11 +9,11 @@
 import UIKit
 import ObjectMapper
 
-fileprivate let kOmerIdentifier = "5a878af5012dd9f43a7ec706"
+fileprivate let kCurrentIdentifier = "5a8815ad10df8d4a5b617b8f"
 
 class UserModel: BaseModel {
     
-    static var current = UserModel(id: kOmerIdentifier)
+    static var current = UserModel(id: kCurrentIdentifier)
     var name: String?
     var email: String?
     var username: String?
@@ -25,7 +25,6 @@ class UserModel: BaseModel {
         email <- map["email"]
         username <- map["username"]
         photo <- map["photo"]
-        
     }
     
 }

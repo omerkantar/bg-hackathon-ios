@@ -9,7 +9,13 @@
 import UIKit
 import ObjectMapper
 
-class SelectRequestTableViewModel: BaseModel {
+class SelectRequestTableViewModel: BaseViewModel {
     
+    var cellVMs: [SelectRequestCellViewModel]?
+    
+    override func build(responseModel: ResponseModel) {
+        
+    }
+
 
 }

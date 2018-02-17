@@ -74,6 +74,15 @@ extension CommonTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        switch self.type {
+        case .pack, .travel:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "selectRequestVC") as! SelectRequestViewController
+            vc.target = self.type == .pack ? .getMyPacks : .getMyTravels
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        default:
+            break
+        }
     }
 }
 

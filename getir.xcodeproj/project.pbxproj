@@ -43,6 +43,10 @@
 		4E92F37D2038497D0020C709 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37B2038497D0020C709 /* RequestTableViewCell.swift */; };
 		4E92F37E2038497D0020C709 /* RequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */; };
 		4E92F38020384D080020C709 /* SelectRequestTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */; };
+		4E92F3832038551A0020C709 /* SelectRequestCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3822038551A0020C709 /* SelectRequestCellViewModel.swift */; };
+		4E92F385203859E20020C709 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F384203859E20020C709 /* TravelModel.swift */; };
+		4E92F38720385B340020C709 /* PackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38620385B340020C709 /* PackModel.swift */; };
+		4E92F38A20385B5A0020C709 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38920385B5A0020C709 /* ActivityModel.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -110,6 +114,10 @@
 		4E92F37B2038497D0020C709 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
 		4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTableViewCell.xib; sourceTree = "<group>"; };
 		4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestTableViewModel.swift; sourceTree = "<group>"; };
+		4E92F3822038551A0020C709 /* SelectRequestCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestCellViewModel.swift; sourceTree = "<group>"; };
+		4E92F384203859E20020C709 /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		4E92F38620385B340020C709 /* PackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModel.swift; sourceTree = "<group>"; };
+		4E92F38920385B5A0020C709 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,9 +182,9 @@
 		4E92F31720375C220020C709 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F381203855070020C709 /* Select */,
 				4E92F34D2037B1AA0020C709 /* Tab */,
 				4E92F3592037C5B40020C709 /* BaseViewModel.swift */,
-				4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 		4E92F3252037622B0020C709 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F38820385B410020C709 /* Activity */,
 				4E92F3512037C3190020C709 /* UserModel.swift */,
 				4E92F3542037C33A0020C709 /* BaseModel.swift */,
 				4E92F323203761D10020C709 /* ResponseModel.swift */,
@@ -388,6 +397,25 @@
 				4E92F37C2038497D0020C709 /* RequestTableViewCell.xib */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		4E92F381203855070020C709 /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F37F20384D080020C709 /* SelectRequestTableViewModel.swift */,
+				4E92F3822038551A0020C709 /* SelectRequestCellViewModel.swift */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		4E92F38820385B410020C709 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F38620385B340020C709 /* PackModel.swift */,
+				4E92F384203859E20020C709 /* TravelModel.swift */,
+				4E92F38920385B5A0020C709 /* ActivityModel.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -784,9 +812,11 @@
 				4E92F34A2037AA810020C709 /* StateTableViewController.swift in Sources */,
 				4E92F371203813A60020C709 /* Date.swift in Sources */,
 				4E92F3482037AA710020C709 /* PackTableViewController.swift in Sources */,
+				4E92F385203859E20020C709 /* TravelModel.swift in Sources */,
 				4E92F3602037C6EE0020C709 /* PackCellViewModel.swift in Sources */,
 				4E92F36C2037FDA10020C709 /* TextField.swift in Sources */,
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
+				4E92F3832038551A0020C709 /* SelectRequestCellViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
 				4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
@@ -799,6 +829,7 @@
 				4E92F3772038405E0020C709 /* UIViewController.swift in Sources */,
 				4E92F3682037F0920020C709 /* FilterModel.swift in Sources */,
 				4E92F34F2037B1CC0020C709 /* CommonCellViewModel.swift in Sources */,
+				4E92F38A20385B5A0020C709 /* ActivityModel.swift in Sources */,
 				4E92F31E20375CB30020C709 /* BaseViewController.swift in Sources */,
 				4E92F3642037C9190020C709 /* FilterViewController.swift in Sources */,
 				4E92F35C2037C6270020C709 /* String.swift in Sources */,
@@ -812,6 +843,7 @@
 				4E92F35A2037C5B40020C709 /* BaseViewModel.swift in Sources */,
 				4E92F3552037C33A0020C709 /* BaseModel.swift in Sources */,
 				4E92F32F20376A830020C709 /* MapViewController.swift in Sources */,
+				4E92F38720385B340020C709 /* PackModel.swift in Sources */,
 				4E92F34C2037AA8F0020C709 /* TravelTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

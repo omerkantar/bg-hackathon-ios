@@ -12,10 +12,12 @@ class StateTableViewCell: CommonTableViewCell {
 
     @IBOutlet weak var requestTypeLabel: UILabel!
 
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        requestTypeLabel.layer.cornerRadius = 5.0
+        requestTypeLabel?.layer.cornerRadius = 5.0
         
     }
 

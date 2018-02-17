@@ -15,6 +15,20 @@ class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var weightLabel: UILabel!
     
     
+    var viewModel: SelectRequestCellViewModel? {
+        didSet {
+            if let vm = viewModel,
+                let directionLabel = directionLabel,
+                let dateLabel = dateLabel,
+                let weightLabel = weightLabel {
+                
+                directionLabel.text = vm.directionText
+                dateLabel.text = vm.dateText
+                weightLabel.text = vm.weightText
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -24,10 +24,10 @@
                         <rect key="frame" x="8" y="12" width="304" height="105.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFf-Jv-IOH">
-                                <rect key="frame" x="236" y="24" width="52" height="58"/>
+                                <rect key="frame" x="228" y="23" width="60" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30\nkg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-fc-Tha">
-                                        <rect key="frame" x="5" y="5" width="42" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30  kg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-fc-Tha">
+                                        <rect key="frame" x="5" y="5" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="HP3-Mo-do5"/>
+                                    <constraint firstAttribute="width" constant="60" id="HP3-Mo-do5"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="centerX" secondItem="dFf-Jv-IOH" secondAttribute="centerX" id="JU1-tl-UhH"/>
-                                    <constraint firstAttribute="height" constant="58" id="UFT-G5-2cf"/>
+                                    <constraint firstAttribute="height" constant="60" id="UFT-G5-2cf"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="centerY" secondItem="dFf-Jv-IOH" secondAttribute="centerY" id="pBm-4w-q1i"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="leading" secondItem="dFf-Jv-IOH" secondAttribute="leading" constant="5" id="rdL-lU-2BI"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="top" secondItem="dFf-Jv-IOH" secondAttribute="top" constant="5" id="xpb-ZM-NeO"/>
@@ -93,6 +93,7 @@
                             <constraint firstItem="WAS-ca-oPd" firstAttribute="top" secondItem="iv2-ZN-1wy" secondAttribute="bottom" constant="4" id="NWW-aU-gDx"/>
                             <constraint firstItem="WAS-ca-oPd" firstAttribute="leading" secondItem="uY9-eU-ZL9" secondAttribute="leading" id="P16-yz-Tlw"/>
                             <constraint firstItem="Juc-Xf-Ehf" firstAttribute="leading" secondItem="G1w-cV-Her" secondAttribute="leading" id="SXi-iv-6Ho"/>
+                            <constraint firstItem="dFf-Jv-IOH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G1w-cV-Her" secondAttribute="trailing" constant="12" id="Sge-l0-CcS"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="leading" secondItem="iv2-ZN-1wy" secondAttribute="trailing" constant="3" id="X0b-iM-ZDe"/>
                             <constraint firstItem="Juc-Xf-Ehf" firstAttribute="top" secondItem="G1w-cV-Her" secondAttribute="bottom" constant="4" id="f70-DL-yc2"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="centerY" secondItem="iv2-ZN-1wy" secondAttribute="centerY" id="gbI-1p-sTy"/>
