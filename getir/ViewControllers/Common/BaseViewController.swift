@@ -16,6 +16,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.buildNavigationBar()
+        self.loadData()
     }
     
     

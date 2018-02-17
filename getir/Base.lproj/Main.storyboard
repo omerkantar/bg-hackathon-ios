@@ -34,8 +34,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Gezginler" id="mLS-Qh-BPE"/>
                     <navigationItem key="navigationItem" title="Gezginler" id="bsp-6s-rPN">
-                        <barButtonItem key="rightBarButtonItem" title="Filtre" style="plain" id="wbY-iU-1sm">
-                            <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Nxm-3n-yMu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CRz-m1-c4f">
+                                <rect key="frame" x="-23" y="-15" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Filtre">
+                                    <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -58,8 +65,18 @@
                     <tabBarItem key="tabBarItem" title="Paketler" id="tpj-09-8Sv"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Paketler" id="gRh-zT-PGO">
-                        <barButtonItem key="rightBarButtonItem" title="Filtre" style="plain" id="pQ8-gr-4JN">
-                            <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Kb9-9D-VFb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cfV-gS-TQv">
+                                <rect key="frame" x="276" y="5.5" width="83" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Filtre">
+                                    <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                            <connections>
+                                <segue destination="UMn-pX-JMp" kind="presentation" id="HSU-1r-Pf7"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -70,6 +87,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTQ-mj-vYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3274" y="-239"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jTC-CK-y2H">
+            <objects>
+                <viewController id="xi0-P9-coI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogC-r5-fcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C0V-fC-nE9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iwa-d6-N0D">
+                        <barButtonItem key="rightBarButtonItem" title="    X " style="plain" id="V5I-5l-8z7">
+                            <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6We-0s-HDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4038" y="-1128"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gqm-Bz-ka7">
@@ -93,11 +130,11 @@
             </objects>
             <point key="canvasLocation" x="1508" y="107"/>
         </scene>
-        <!--Item-->
+        <!--Paketler-->
         <scene sceneID="aht-Bf-bcl">
             <objects>
                 <navigationController id="PXy-eF-3hN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Co-zk-dds"/>
+                    <tabBarItem key="tabBarItem" title="Paketler" id="9Co-zk-dds"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oWg-yC-9ws">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,11 +188,11 @@
             </objects>
             <point key="canvasLocation" x="3292" y="1155"/>
         </scene>
-        <!--Item-->
+        <!--Gezginler-->
         <scene sceneID="qR3-zy-OD0">
             <objects>
                 <navigationController id="B2Z-zu-RET" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fNX-OH-myU"/>
+                    <tabBarItem key="tabBarItem" title="Gezginler" id="fNX-OH-myU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="LpB-x8-iR6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -177,11 +214,11 @@
             </objects>
             <point key="canvasLocation" x="2438" y="448"/>
         </scene>
-        <!--Item-->
+        <!--Durumlar-->
         <scene sceneID="4Cg-RD-xlI">
             <objects>
                 <navigationController id="HcW-bg-Vxd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gba-ZW-6fh"/>
+                    <tabBarItem key="tabBarItem" title="Durumlar" id="gba-ZW-6fh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NgR-c7-AfC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -202,6 +239,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HT-W1-2pL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2438" y="1155"/>
+        </scene>
+        <!--Paketler-->
+        <scene sceneID="hdp-0e-Jfs">
+            <objects>
+                <navigationController id="UMn-pX-JMp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Paketler" id="NcW-BK-XMQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JBQ-re-V6l">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xi0-P9-coI" kind="relationship" relationship="rootViewController" id="kON-sR-4Ll"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXB-YC-q23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3273" y="-1128"/>
         </scene>
     </scenes>
 </document>

@@ -28,6 +28,7 @@ class ResponseModel: Mappable {
     func mapping(map: Map) {
         data <- map["data"]
         message <- map["message"]
+        isSuccess <- map["success"]
     }
     
     static func error(type: ResponseErrorType) -> ResponseModel {

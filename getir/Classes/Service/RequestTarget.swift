@@ -13,6 +13,7 @@ import Moya
 enum RequestTarget {
     case coffee
     case call(number: Int)
+    case users
 }
 
 
@@ -20,6 +21,11 @@ enum RequestTarget {
 extension RequestTarget: TargetType {
     
     var baseURL: URL {
+        
+        if let url = URL(string: "http://172.20.10.4:8080/v1") {
+            return url
+        }
+        
         switch self {
         default:
             break
@@ -32,6 +38,8 @@ extension RequestTarget: TargetType {
         switch self {
         case .call(let number):
             return "/\(number)"
+        case .users:
+            return "/users"
         default:
             return ""
         }
