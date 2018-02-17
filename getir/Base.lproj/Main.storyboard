@@ -443,19 +443,33 @@
                                     <constraint firstItem="XLx-Yi-bde" firstAttribute="top" secondItem="8uz-DN-XYn" secondAttribute="top" id="i3V-zJ-92W"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thG-9S-U6g">
+                                <rect key="frame" x="0.0" y="75" width="375" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8uz-DN-XYn" firstAttribute="top" secondItem="rMB-9W-QUZ" secondAttribute="top" id="I2d-sa-WOh"/>
                             <constraint firstItem="8uz-DN-XYn" firstAttribute="leading" secondItem="rMB-9W-QUZ" secondAttribute="leading" id="Ql3-4t-JNk"/>
+                            <constraint firstItem="thG-9S-U6g" firstAttribute="top" secondItem="8uz-DN-XYn" secondAttribute="bottom" id="VbB-z3-2O1"/>
                             <constraint firstItem="rMB-9W-QUZ" firstAttribute="trailing" secondItem="8uz-DN-XYn" secondAttribute="trailing" id="fFK-pK-IEU"/>
+                            <constraint firstItem="thG-9S-U6g" firstAttribute="leading" secondItem="rMB-9W-QUZ" secondAttribute="leading" id="gH6-zr-fZv"/>
                             <constraint firstItem="XLx-Yi-bde" firstAttribute="width" secondItem="xRC-X0-wLs" secondAttribute="width" id="ghD-1l-8oB"/>
+                            <constraint firstItem="rMB-9W-QUZ" firstAttribute="bottom" secondItem="thG-9S-U6g" secondAttribute="bottom" id="mfP-jS-2e0"/>
+                            <constraint firstItem="rMB-9W-QUZ" firstAttribute="trailing" secondItem="thG-9S-U6g" secondAttribute="trailing" id="uid-u2-LPp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rMB-9W-QUZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Güncel Durumlar" id="m1I-R0-d7g"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ekQ-9I-xIq"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="thG-9S-U6g" id="ybG-1I-KIO"/>
+                        <outlet property="dealsButton" destination="WQe-rW-H4m" id="at8-2b-IOR"/>
+                        <outlet property="requestsButton" destination="jra-bh-P5t" id="YJh-a4-6F8"/>
+                        <outlet property="scrollView" destination="8uz-DN-XYn" id="IP2-RM-UaM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGJ-zT-ecR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

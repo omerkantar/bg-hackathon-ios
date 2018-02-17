@@ -15,6 +15,8 @@ class StateTableViewController: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     
+    var pageViewController: PageViewController?
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
