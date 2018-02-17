@@ -256,38 +256,6 @@
             </objects>
             <point key="canvasLocation" x="4037.5999999999999" y="-1128.4857571214393"/>
         </scene>
-        <!--Search Place View Controller-->
-        <scene sceneID="rYC-et-Wcl">
-            <objects>
-                <viewController storyboardIdentifier="searchPlaceVC" id="fYD-rf-gPZ" customClass="SearchPlaceViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mEt-rj-chz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-zO-n7m">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
-                        <constraints>
-                            <constraint firstItem="sYD-gp-mSc" firstAttribute="trailing" secondItem="iOM-zO-n7m" secondAttribute="trailing" id="Aiy-Lw-evR"/>
-                            <constraint firstItem="iOM-zO-n7m" firstAttribute="top" secondItem="sYD-gp-mSc" secondAttribute="top" id="ECc-Az-9a8"/>
-                            <constraint firstItem="iOM-zO-n7m" firstAttribute="leading" secondItem="sYD-gp-mSc" secondAttribute="leading" id="PVs-qf-brF"/>
-                            <constraint firstItem="sYD-gp-mSc" firstAttribute="bottom" secondItem="iOM-zO-n7m" secondAttribute="bottom" id="lzC-V7-BGh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="sYD-gp-mSc"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lWC-Kr-UQB"/>
-                    <connections>
-                        <outlet property="tableView" destination="iOM-zO-n7m" id="eRJ-Ot-PQw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yC9-d1-bTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4850" y="-1128"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gqm-Bz-ka7">
             <objects>

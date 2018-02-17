@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 enum FilterType {
     case pack
@@ -26,6 +27,7 @@ class FilterViewController: BaseViewController {
     
     var delegate: FilterDelegate?
     var filterModel = FilterModel()
+    var activeTextField: UITextField? = nil
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -61,7 +63,9 @@ extension FilterViewController {
             filterModel = delegate.filterModel()
             switch delegate.filterType {
             case .pack:
-                self.dateInformationLabel.text = "Paketin son tarihini ya da belirli bir aralığını giriniz."
+                self.dateInformationLabel.text = "Paketin gönderileceği tarihi giriniz."
+                self.fromTextField.placeholder = "Gönderilecek tarih"
+                self.toTextField.isHidden = true
                 break
             case .travel:
                 self.dateInformationLabel.text = "Gezginlerin hareket ettiği tarihi ya da belirli bir tarih aralığını giriniz."
@@ -81,9 +85,17 @@ extension FilterViewController {
 // MARK: - UITextFieldDelegate
 extension FilterViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeTextField = textField
+
         switch textField {
         case fromTextField, toTextField:
-            pushSearchPlaceVC(search: textField.placeholder)
+//            pushSearchPlaceVC(search: textField.placeholder)
+            let autocompleteController = GMSAutocompleteViewController()
+            autocompleteController.delegate = self
+            autocompleteController.tintColor = UIColor.orange
+            autocompleteController.navigationController?.navigationBar.tintColor = UIColor.orange
+            present(autocompleteController, animated: true, completion: nil)
+
             return false
         case startDateTextField, endDateTextField:
             
@@ -91,7 +103,22 @@ extension FilterViewController: UITextFieldDelegate {
             datePicker.tag = textField.tag + 100
             datePicker.datePickerMode = .date
             textField.inputView = datePicker
+            
+            if let date = filterModel.sendDate {
+                datePicker.date = date
+            } else if startDateTextField == textField,
+                let date = filterModel.startDate {
+                datePicker.date = date
+            } else if endDateTextField == textField,
+                let date = filterModel.endDate {
+                datePicker.date = date
+            }
+            
+            datePicker.minimumDate = Date()
+            
             datePicker.addTarget(self, action: #selector(FilterViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+            
+            
             return true
         default:
             return true
@@ -102,11 +129,77 @@ extension FilterViewController: UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField != fromTextField && textField != toTextField {
+            activeTextField = nil
+        }
+    }
+    
     
     @objc func datePickerValueChanged(_ picker: UIDatePicker) {
         let date = picker.date
         if let textField = self.view.viewWithTag(picker.tag - 100) as? UITextField {
             textField.text = date.string
+            
+            if let delegate = delegate {
+                switch textField {
+                case startDateTextField:
+                    if delegate.filterType == .pack {
+                        self.filterModel.sendDate = date
+                    } else {
+                        self.filterModel.startDate = date
+                    }
+                case endDateTextField:
+                    self.filterModel.endDate = date
+                default:
+                    break
+                }
+            }
+            
         }
     }
+}
+
+
+extension FilterViewController: GMSAutocompleteViewControllerDelegate {
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        let name = place.name
+        
+        if let textField = activeTextField {
+            switch textField {
+            case fromTextField:
+                self.filterModel.fromPlace = name
+            case toTextField:
+                self.filterModel.toPlace = name
+            default:
+                break
+            }
+        }
+        
+        print("Place name: \(place.name)")
+        print("Place attributions: \(place.attributions)")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
 }

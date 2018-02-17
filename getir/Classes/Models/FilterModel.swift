@@ -13,6 +13,7 @@ class FilterModel {
     var weight: Int?
     var startDate: Date?
     var endDate: Date?
+    var sendDate: Date?
     var fromPlace: String?
     var toPlace: String?
 
@@ -35,6 +36,10 @@ class FilterModel {
         
         if let toPlace = toPlace {
             parameters["to"] = toPlace
+        }
+        
+        if let date = sendDate {
+            
         }
         
         return parameters

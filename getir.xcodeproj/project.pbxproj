@@ -37,7 +37,6 @@
 		4E92F3682037F0920020C709 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3672037F0920020C709 /* FilterModel.swift */; };
 		4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3692037F22A0020C709 /* BGTextField.swift */; };
 		4E92F36C2037FDA10020C709 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F36B2037FDA10020C709 /* TextField.swift */; };
-		4E92F36F20380B220020C709 /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F36E20380B220020C709 /* SearchPlaceViewController.swift */; };
 		4E92F371203813A60020C709 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F370203813A60020C709 /* Date.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
@@ -100,7 +99,6 @@
 		4E92F3672037F0920020C709 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		4E92F3692037F22A0020C709 /* BGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGTextField.swift; sourceTree = "<group>"; };
 		4E92F36B2037FDA10020C709 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		4E92F36E20380B220020C709 /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
 		4E92F370203813A60020C709 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 		4E92F31620375C1D0020C709 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E92F36D20380A980020C709 /* SearchPlace */,
 				4E92F3622037C8F50020C709 /* Filters */,
 				4E92F3462037AA500020C709 /* Tabs */,
 				4E92F32B203768360020C709 /* Map */,
@@ -352,14 +349,6 @@
 				4E92F3632037C9190020C709 /* FilterViewController.swift */,
 			);
 			path = Filters;
-			sourceTree = "<group>";
-		};
-		4E92F36D20380A980020C709 /* SearchPlace */ = {
-			isa = PBXGroup;
-			children = (
-				4E92F36E20380B220020C709 /* SearchPlaceViewController.swift */,
-			);
-			path = SearchPlace;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -758,7 +747,6 @@
 				4E92F36C2037FDA10020C709 /* TextField.swift in Sources */,
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
-				4E92F36F20380B220020C709 /* SearchPlaceViewController.swift in Sources */,
 				4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
