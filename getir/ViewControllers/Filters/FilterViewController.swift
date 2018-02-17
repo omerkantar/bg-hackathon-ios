@@ -22,7 +22,8 @@ class FilterViewController: BaseViewController {
     @IBOutlet weak var endDateTextField: UITextField!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var dateInformationLabel:UILabel!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var delegate: FilterDelegate?
     var filterModel = FilterModel()
     
@@ -48,6 +49,8 @@ class FilterViewController: BaseViewController {
 // MARK: - Build
 extension FilterViewController {
     func build() {
+        scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 10.0, 0.0)
+        
         if let delegate = delegate {
             filterModel = delegate.filterModel()
             switch delegate.filterType {
@@ -65,6 +68,36 @@ extension FilterViewController {
         weightTextField.designing()
         startDateTextField.designing()
         endDateTextField.designing()
+        
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension FilterViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        switch textField {
+        case fromTextField, toTextField:
+            
+            return false
+        case startDateTextField, endDateTextField:
+            
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = .date
+            textField.inputView = datePicker
+            datePicker.addTarget(self, action: #selector(FilterViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+            return false
+        default:
+            break
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    
+    @objc func datePickerValueChanged(_ picker: UIDatePicker) {
+        
         
     }
 }
