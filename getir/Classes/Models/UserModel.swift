@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-fileprivate let kCurrentIdentifier = "5a8815ad10df8d4a5b617b8f"
+fileprivate let kCurrentIdentifier = "5a882035726aa00d4b82ca1b"
 
 class UserModel: BaseModel {
     

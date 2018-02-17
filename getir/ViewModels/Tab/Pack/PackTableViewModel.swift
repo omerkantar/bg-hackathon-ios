@@ -11,10 +11,14 @@ import ObjectMapper
 
 class PackTableViewModel: BaseViewModel {
 
-    var cellVMs: [PackCellViewModel]?
+    var cellVMs = [PackCellViewModel]()
     
     override func build(responseModel: ResponseModel) {
-        if let users = Mapper<UserModel>().mapArray(JSONObject: responseModel.data) {
+        if let packs = Mapper<PackModel>().mapArray(JSONObject: responseModel.data) {
+            cellVMs.removeAll()
+            for pack in packs {
+                
+            }
             
         }
     }

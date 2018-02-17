@@ -9,10 +9,6 @@
 import UIKit
 import ObjectMapper
 
-enum ActivityType {
-    case pack
-    case travel
-}
 
 class ActivityModel: BaseModel {
     
@@ -20,14 +16,11 @@ class ActivityModel: BaseModel {
     var user: UserModel?
     var to: String?
     var from: String?
-    var createAt: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
         weight <- map["weight"]
         to <- map["to"]
         from <- map["from"]
-        date <- map["date"]
-        createAt <- map["create_at"]
     }
 }

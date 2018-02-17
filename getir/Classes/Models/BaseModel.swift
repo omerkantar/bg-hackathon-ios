@@ -13,7 +13,8 @@ class BaseModel: Mappable {
     
     
     var id: String?
-    
+    var createAt: String?
+
     init() { }
     
     init(id: String) {
@@ -24,5 +25,6 @@ class BaseModel: Mappable {
     
     func mapping(map: Map) {
         id <- map["_id"]
+        createAt <- map["create_at"]
     }
 }

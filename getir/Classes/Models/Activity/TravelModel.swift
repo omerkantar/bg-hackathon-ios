@@ -12,6 +12,7 @@ import ObjectMapper
 class TravelModel: ActivityModel {
 
     var date: String?
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         date <- map["date"]

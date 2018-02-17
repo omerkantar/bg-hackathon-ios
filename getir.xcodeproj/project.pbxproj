@@ -47,6 +47,9 @@
 		4E92F385203859E20020C709 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F384203859E20020C709 /* TravelModel.swift */; };
 		4E92F38720385B340020C709 /* PackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38620385B340020C709 /* PackModel.swift */; };
 		4E92F38A20385B5A0020C709 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38920385B5A0020C709 /* ActivityModel.swift */; };
+		4E92F38D20385D960020C709 /* ActivityStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38C20385D960020C709 /* ActivityStateModel.swift */; };
+		4E92F38F20385E5B0020C709 /* RequestStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38E20385E5B0020C709 /* RequestStateModel.swift */; };
+		4E92F39120385FBB0020C709 /* DealStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F39020385FBB0020C709 /* DealStateModel.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -118,6 +121,9 @@
 		4E92F384203859E20020C709 /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		4E92F38620385B340020C709 /* PackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModel.swift; sourceTree = "<group>"; };
 		4E92F38920385B5A0020C709 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		4E92F38C20385D960020C709 /* ActivityStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStateModel.swift; sourceTree = "<group>"; };
+		4E92F38E20385E5B0020C709 /* RequestStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStateModel.swift; sourceTree = "<group>"; };
+		4E92F39020385FBB0020C709 /* DealStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealStateModel.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 		4E92F3252037622B0020C709 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F38B20385D7E0020C709 /* State */,
 				4E92F38820385B410020C709 /* Activity */,
 				4E92F3512037C3190020C709 /* UserModel.swift */,
 				4E92F3542037C33A0020C709 /* BaseModel.swift */,
@@ -416,6 +423,16 @@
 				4E92F38920385B5A0020C709 /* ActivityModel.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		4E92F38B20385D7E0020C709 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F38C20385D960020C709 /* ActivityStateModel.swift */,
+				4E92F38E20385E5B0020C709 /* RequestStateModel.swift */,
+				4E92F39020385FBB0020C709 /* DealStateModel.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -821,8 +838,10 @@
 				4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
+				4E92F39120385FBB0020C709 /* DealStateModel.swift in Sources */,
 				4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */,
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
+				4E92F38D20385D960020C709 /* ActivityStateModel.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
 				4E92F37D2038497D0020C709 /* RequestTableViewCell.swift in Sources */,
 				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
@@ -841,6 +860,7 @@
 				4E92F3522037C3190020C709 /* UserModel.swift in Sources */,
 				4E92F3372037A0680020C709 /* PackTableViewCell.swift in Sources */,
 				4E92F35A2037C5B40020C709 /* BaseViewModel.swift in Sources */,
+				4E92F38F20385E5B0020C709 /* RequestStateModel.swift in Sources */,
 				4E92F3552037C33A0020C709 /* BaseModel.swift in Sources */,
 				4E92F32F20376A830020C709 /* MapViewController.swift in Sources */,
 				4E92F38720385B340020C709 /* PackModel.swift in Sources */,
