@@ -25,13 +25,10 @@ class ServiceManager {
         let provider = MoyaProvider<RequestTarget>()
         
         provider.request(target) { (result) in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             switch result {
             case .success(let moyaResponse):
-                
                 let statusCode = moyaResponse.statusCode
-                
                 do {
                     try moyaResponse.filterSuccessfulStatusCodes()
                     let data = try moyaResponse.mapJSON()
@@ -52,7 +49,6 @@ class ServiceManager {
                         do {
                             let body = try error.response?.mapJSON()
                             print(body)
-                            
                         } catch {
                             print(error)
                         }
@@ -76,6 +72,8 @@ class ServiceManager {
                 }
                 break
             }
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
 

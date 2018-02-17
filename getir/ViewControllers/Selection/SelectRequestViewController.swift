@@ -77,14 +77,16 @@ class SelectRequestViewController: BaseViewController {
 // MARK: - TableViewDataSource
 extension SelectRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 10
+        if let list = viewModel.cellVMs {
+            return list.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdetifier, for: indexPath) as! RequestTableViewCell
-        
+        cell.viewModel = viewModel.cellVMs?[indexPath.row]
         return cell
     }
 }
