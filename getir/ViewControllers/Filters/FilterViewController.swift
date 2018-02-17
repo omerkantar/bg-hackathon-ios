@@ -29,6 +29,7 @@ class FilterViewController: BaseViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        build()
     }
 
     

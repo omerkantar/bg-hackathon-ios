@@ -42,6 +42,9 @@
                                 <state key="normal" title="Filtre">
                                     <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="filterButtonTapped" destination="5Tk-AM-Npf" eventType="touchUpInside" id="e6w-3F-m6T"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -73,6 +76,9 @@
                                 <state key="normal" title="Filtre">
                                     <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="filterButtonTapped" destination="BDh-qB-hMt" eventType="touchUpInside" id="0a3-Wz-2eR"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +108,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="7ND-FV-rl0">
                                                 <rect key="frame" x="33" y="32" width="309" height="136"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nereden" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfS-g9-Oaa">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nereden" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfS-g9-Oaa">
                                                         <rect key="frame" x="0.0" y="0.0" width="309" height="36"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>
@@ -112,14 +118,14 @@
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nereye" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-La-PVi">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nereye" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-La-PVi">
                                                         <rect key="frame" x="0.0" y="50" width="309" height="36"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="paket ağırlığı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMZ-s8-qfS">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="paket ağırlığı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMZ-s8-qfS">
                                                         <rect key="frame" x="0.0" y="100" width="309" height="36"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <nil key="textColor"/>
@@ -139,14 +145,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Başlangıç tarihi (Opsionel)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EC-jN-zgT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Başlangıç tarihi (Opsionel)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EC-jN-zgT">
                                                 <rect key="frame" x="33" y="234.5" width="309" height="36"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bitiş tarihi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAc-2h-8LD">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bitiş tarihi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAc-2h-8LD">
                                                 <rect key="frame" x="33" y="283" width="309" height="36"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="textColor"/>
@@ -320,9 +326,7 @@
                         <viewLayoutGuide key="safeArea" id="rMB-9W-QUZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Güncel Durumlar" id="m1I-R0-d7g"/>
-                    <navigationItem key="navigationItem" id="ekQ-9I-xIq">
-                        <barButtonItem key="rightBarButtonItem" title="Filtre" id="sAj-Ze-fCc"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ekQ-9I-xIq"/>
                     <connections>
                         <outlet property="tableView" destination="waZ-qc-ltk" id="1pM-42-Dcr"/>
                     </connections>

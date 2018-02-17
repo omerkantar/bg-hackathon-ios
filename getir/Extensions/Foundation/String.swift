@@ -11,4 +11,12 @@ extension String {
     var imageURL: URL? {
         return URL(string: self)
     }
+    
+    var dateText: String {
+        
+        let dateFormatter = DateFormatter()
+        
+        
+        return ""
+    }
 }
