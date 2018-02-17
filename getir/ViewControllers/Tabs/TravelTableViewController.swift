@@ -35,12 +35,14 @@ class TravelTableViewController: CommonTableViewController {
                 cellVMs?.append(CommonCellViewModel(activity: travel))
             }
             self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
     
     override func refreshingData() {
         self.filter = FilterModel()
         self.loadData()
+
     }
     
     // MARK: - Action

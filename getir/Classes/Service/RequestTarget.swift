@@ -21,6 +21,14 @@ enum RequestTarget {
     case getTravels(filter: FilterModel)
     case getMyPacks
     case getMyTravels
+    
+    case createPack(pack: PackModel)
+    case createTravel(travel: ActivityStateModel)
+    case createRequest(request: ActivityStateModel)
+    case createDeal(request: ActivityStateModel)
+    
+    case getMyRequests
+    case getMyDeals
 }
 
 
@@ -47,16 +55,28 @@ extension RequestTarget: TargetType {
             return "/\(number)"
         case .users:
             return "/users"
-        case .getPacks, .getMyPacks:
+        case .getPacks, .getMyPacks, .createPack:
             return "/packs"
-        case .getTravels, .getMyTravels:
+        case .getTravels, .getMyTravels, .createTravel:
             return "/travels"
+        
+        case .getMyDeals, .createDeal:
+            return "/deals"
+        case .getMyRequests, .createRequest:
+            return "/requests"
+            
         default:
             return ""
         }
     }
     
     var method: Moya.Method {
+        switch self {
+        case .createRequest, .createDeal, .createTravel, .createPack:
+            return Method.post
+        default:
+            break
+        }
         return Method.get
     }
     

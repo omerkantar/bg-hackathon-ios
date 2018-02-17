@@ -47,7 +47,7 @@ class CommonTableViewController: BaseViewController {
     // MARK: -
     
     @objc func refreshingData() {
-        
+        self.refreshControl.beginRefreshing()
     }
 }
 

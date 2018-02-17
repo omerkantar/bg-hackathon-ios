@@ -13,8 +13,16 @@ class SelectRequestTableViewModel: BaseViewModel {
     
     var cellVMs: [SelectRequestCellViewModel]?
     
-    override func build(responseModel: ResponseModel) {
-        
+    func build(responseModel: ResponseModel, selectedActivity: ActivityModel) {
+        self.cellVMs = [SelectRequestCellViewModel]()
+        if let list = Mapper<ActivityModel>().mapArray(JSONObject: responseModel.data) {
+            for item in list {
+                let vm = SelectRequestCellViewModel(activity: item)
+                if vm.isValidate(activity: selectedActivity) {
+                    self.cellVMs?.append(vm)
+                }
+            }
+        }
     }
 
 

@@ -270,9 +270,21 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBL-62-ZUn">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-rV-bgF">
+                                        <rect key="frame" x="129" y="14" width="116" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Lwe-hD-jQn"/>
+                                    <constraint firstItem="tUQ-rV-bgF" firstAttribute="centerX" secondItem="YBL-62-ZUn" secondAttribute="centerX" id="aq8-6h-HS4"/>
+                                    <constraint firstItem="tUQ-rV-bgF" firstAttribute="centerY" secondItem="YBL-62-ZUn" secondAttribute="centerY" id="v3a-a4-Nea"/>
                                 </constraints>
                             </view>
                         </subviews>

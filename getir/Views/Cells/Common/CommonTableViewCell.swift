@@ -75,7 +75,7 @@ class CommonTableViewCell: UITableViewCell {
             usernameLabel.text = viewModel.usernameText
         }
         
-        // NE olur ne olmaz force kullanmayalim child cell'den kaynakli
+        // ne olur ne olmaz force kullanmayalim child cell'den kaynakli
         self.userImageView?.image = nil
         if let imageUrl = viewModel.userPhotoUrl,
             let photoImageView = self.userImageView {

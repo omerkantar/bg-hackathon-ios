@@ -24,8 +24,6 @@ class CommonCellViewModel {
         self.directionText = activity.direction
         self.weightText = "\(activity.weight)\nkg"
         
-        if activity is TravelModel {
-            self.dateText = (activity as? TravelModel)?.date?.dateText
-        }
+        
     }
 }

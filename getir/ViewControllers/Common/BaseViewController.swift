@@ -17,7 +17,20 @@ class BaseViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.buildNavigationBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = self.isHiddenBottomBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = self.isHiddenBottomBar()
+    }
 
+    func isHiddenBottomBar() -> Bool {
+        return false
+    }
 }
 
 // MARK: - NavigationBar
@@ -27,7 +40,7 @@ extension BaseViewController {
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 25.0, weight: .semibold), NSAttributedStringKey.foregroundColor: UIColor.darkGray]
-        } 
+        }
     }
 }
 

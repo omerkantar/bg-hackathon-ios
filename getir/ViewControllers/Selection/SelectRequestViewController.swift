@@ -9,20 +9,41 @@
 import UIKit
 
 
-fileprivate let kCellIdetifier = String()
+fileprivate let kCellIdetifier = String(describing: RequestTableViewCell.self)
 class SelectRequestViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var addButton: UIButton!
+    
+    var selectedActivity: ActivityModel?
+    
     var target: RequestTarget = .getMyPacks
     
     var viewModel = SelectRequestTableViewModel()
+    
+    var isMyPacks = false
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         buildTableView()
         
+        switch self.target {
+        case .getMyPacks:
+            self.isMyPacks = true
+            self.addButton.setTitle("Paket ekle", for: .normal)
+            break
+        case .getMyTravels:
+            self.addButton.setTitle("Gezi ekle", for: .normal)
+            break
+        default:
+            break
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
     }
     
     
@@ -35,6 +56,20 @@ class SelectRequestViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    
+    override func isHiddenBottomBar() -> Bool {
+        return true
+    }
+    
+    // MARK: - Action
+    @IBAction func addButtonTapped() {
+        if self.isMyPacks {
+            
+        } else {
+            
+        }
+    }
 
 }
 
@@ -42,6 +77,7 @@ class SelectRequestViewController: BaseViewController {
 // MARK: - TableViewDataSource
 extension SelectRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return 10
     }
     
@@ -65,6 +101,7 @@ extension SelectRequestViewController {
     override func loadData() {
         request(target: self.target, loadingView: self.tableView) { (responseModel) in
             self.viewModel.build(responseModel: responseModel)
+            self.tableView.reloadData()
         }
     }
 }

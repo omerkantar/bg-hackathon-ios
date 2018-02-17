@@ -23,6 +23,13 @@ class ActivityModel: BaseModel {
         return ""
     }
     
+    var dateText: String? {
+        if self is TravelModel {
+            return (self as? TravelModel)?.date?.dateText
+        }
+        return nil
+    }
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         weight <- map["weight"]
