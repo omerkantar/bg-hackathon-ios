@@ -25,8 +25,8 @@ class FilterModel {
         }
         if let startDate = startDate,
             let endDate = endDate {
-            parameters["startDate"] = startDate as Any
-            parameters["endDate"] = endDate as Any
+            parameters["startDate"] = startDate.sortString as Any
+            parameters["endDate"] = endDate.sortString as Any
         }
         
         if let fromPlace = fromPlace {
@@ -38,7 +38,7 @@ class FilterModel {
         }
         
         if let date = sendDate {
-            parameters["d"] = date.string
+            parameters["d"] = date.sortString
         }
         if parameters.keys.count == 0 {
             return nil
