@@ -40,7 +40,6 @@ extension BaseViewController {
     func request(target: RequestTarget, loadingView: UIView? = nil, isShowingError: Bool = false, success: NetworkSuccessBlock?) {
 
         var animatingView: LoadingView?
-        
         if let loadingView = loadingView {
             animatingView = LoadingView.show(parentView: loadingView)
         }
@@ -76,6 +75,13 @@ extension BaseViewController {
             rootVC.delegate = delegate
         }
         self.present(nc, animated: true, completion: nil)
+    }
+    
+    func pushSearchPlaceVC(search: String?) {
+        let searchPlaceVC = self.storyboard?.instantiateViewController(withIdentifier: "searchPlaceVC") as! SearchPlaceViewController
+        searchPlaceVC.searchBarPlaceholder = search
+        self.navigationController?.pushViewController(searchPlaceVC, animated: true)
+        
     }
 }
 

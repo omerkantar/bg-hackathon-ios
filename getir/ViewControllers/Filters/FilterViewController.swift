@@ -51,6 +51,12 @@ extension FilterViewController {
     func build() {
         scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 10.0, 0.0)
         
+        fromTextField.delegate = self
+        toTextField.delegate = self
+        weightTextField.delegate = self
+        startDateTextField.delegate = self
+        endDateTextField.delegate = self
+        
         if let delegate = delegate {
             filterModel = delegate.filterModel()
             switch delegate.filterType {
@@ -77,17 +83,18 @@ extension FilterViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         switch textField {
         case fromTextField, toTextField:
-            
+            pushSearchPlaceVC(search: textField.placeholder)
             return false
         case startDateTextField, endDateTextField:
             
             let datePicker = UIDatePicker()
+            datePicker.tag = textField.tag + 100
             datePicker.datePickerMode = .date
             textField.inputView = datePicker
             datePicker.addTarget(self, action: #selector(FilterViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
-            return false
+            return true
         default:
-            break
+            return true
         }
     }
     
@@ -97,7 +104,9 @@ extension FilterViewController: UITextFieldDelegate {
     
     
     @objc func datePickerValueChanged(_ picker: UIDatePicker) {
-        
-        
+        let date = picker.date
+        if let textField = self.view.viewWithTag(picker.tag - 100) as? UITextField {
+            textField.text = date.string
+        }
     }
 }
