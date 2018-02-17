@@ -17,7 +17,6 @@ class StateTableViewCell: CommonTableViewCell {
         super.awakeFromNib()
         // Initialization code
         requestTypeLabel?.layer.cornerRadius = 5.0
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

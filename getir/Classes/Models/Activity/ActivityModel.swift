@@ -18,10 +18,11 @@ class ActivityModel: BaseModel {
     
     var direction: String? {
         if let to = to, let from = from {
-            return "\(from)'dan \(to)'ya"
+            return "\(from) ✈️  \(to)"
         }
         return ""
     }
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         weight <- map["weight"]

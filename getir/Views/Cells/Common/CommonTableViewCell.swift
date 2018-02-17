@@ -25,9 +25,9 @@ class CommonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
         if let containerView = containerView {
-            containerView.layer.borderColor = UIColor.groupTableViewBackground.withAlphaComponent(0.34).cgColor
+            containerView.layer.borderColor = UIColor.groupTableViewBackground.withAlphaComponent(0.5).cgColor
             containerView.layer.borderWidth = 1.0
-            containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(0.2)
+            containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(0.34)
             containerView.layer.cornerRadius = 3.0
         }
         
@@ -54,7 +54,7 @@ class CommonTableViewCell: UITableViewCell {
         super.setHighlighted(highlighted, animated: animated)
         
         if let containerView = containerView {
-            var alpha: CGFloat = 0.2
+            var alpha: CGFloat = 0.34
             var scale: CGFloat = 1.0
             if highlighted {
                 // MARK: - 1989 Meslektaşım, Semih Ozturk anisina 😢
@@ -89,7 +89,10 @@ class CommonTableViewCell: UITableViewCell {
         if let weightLabel = weightLabel {
             weightLabel.text = viewModel.weightText
         }
-    
+
+        if let dateLabel = self.viewWithTag(101) as? UILabel {
+            dateLabel.text = viewModel.dateText
+        }
     }
 
 }

@@ -198,7 +198,6 @@
 		4E92F31820375C270020C709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E92F3722038285F0020C709 /* New Group */,
 				4E92F3332037A0120020C709 /* Cells */,
 				4E92F328203764580020C709 /* LoadingView */,
 			);
@@ -380,13 +379,6 @@
 				4E92F3632037C9190020C709 /* FilterViewController.swift */,
 			);
 			path = Filter;
-			sourceTree = "<group>";
-		};
-		4E92F3722038285F0020C709 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4E92F373203835C70020C709 /* Selection */ = {

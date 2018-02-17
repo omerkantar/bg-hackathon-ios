@@ -45,6 +45,7 @@ class FilterViewController: BaseViewController {
         if let delegate = delegate {
             delegate.updateFilterModel(filterModel)
         }
+        self.dismissButtonTapped()
     }
 }
 

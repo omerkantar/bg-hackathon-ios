@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class TravelTableViewController: CommonTableViewController {
 
@@ -20,6 +21,22 @@ class TravelTableViewController: CommonTableViewController {
     }
 
     
+    // MARK: - Load Data
+    override func loadData() {
+        self.request(target: .getTravels(filter: filter), loadingView: self.tableView, isShowingError: true) { (response) in
+            self.loadedResponse(response)
+        }
+    }
+    
+    func loadedResponse(_ response: ResponseModel) {
+        if let travels = Mapper<TravelModel>().mapArray(JSONObject: response.data) {
+            self.cellVMs = [CommonCellViewModel]()
+            for travel in travels {
+                cellVMs?.append(CommonCellViewModel(activity: travel))
+            }
+            self.tableView.reloadData()
+        }
+    }
     // MARK: - Action
     @IBAction func filterButtonTapped() {
         self.presentFilterVC(delegate: self)

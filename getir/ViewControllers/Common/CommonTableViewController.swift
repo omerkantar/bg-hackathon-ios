@@ -36,9 +36,12 @@ class CommonTableViewController: BaseViewController {
         tableView.register(UINib(nibName: self.type.cellIdentifier, bundle: nil), forCellReuseIdentifier: self.type.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
-        refreshControl.frame.origin.y = -20
         refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
-        tableView.addSubview(refreshControl)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
     }
     
     // MARK: -
@@ -53,7 +56,7 @@ extension CommonTableViewController: UITableViewDataSource {
         if let list = cellVMs {
             return list.count
         }
-        return 10
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

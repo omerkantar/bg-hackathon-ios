@@ -23,16 +23,16 @@
                         <rect key="frame" x="8" y="8" width="359" height="137.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-2F-FcC">
-                                <rect key="frame" x="47" y="34" width="40" height="17"/>
+                                <rect key="frame" x="51" y="36" width="40" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OU6-Oz-UtV">
-                                <rect key="frame" x="12" y="26" width="32" height="32"/>
+                                <rect key="frame" x="12" y="26" width="36" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1H-k4-oFe">
-                                        <rect key="frame" x="1" y="1" width="30" height="30"/>
+                                        <rect key="frame" x="1" y="1" width="34" height="34"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="trailing" secondItem="s1H-k4-oFe" secondAttribute="trailing" constant="1" id="CmV-aE-feK"/>
                                     <constraint firstItem="s1H-k4-oFe" firstAttribute="top" secondItem="OU6-Oz-UtV" secondAttribute="top" constant="1" id="E4A-y6-BZw"/>
                                     <constraint firstItem="s1H-k4-oFe" firstAttribute="leading" secondItem="OU6-Oz-UtV" secondAttribute="leading" constant="1" id="FOA-j9-ft6"/>
-                                    <constraint firstAttribute="height" constant="32" id="Wuz-oS-VvV"/>
+                                    <constraint firstAttribute="height" constant="36" id="Wuz-oS-VvV"/>
                                     <constraint firstAttribute="width" secondItem="OU6-Oz-UtV" secondAttribute="height" multiplier="1:1" id="inD-jt-HH7"/>
                                 </constraints>
                             </view>
@@ -56,19 +56,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ankara'dan Istanbul'a 30kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iW6-Ge-e50">
-                                <rect key="frame" x="13" y="66" width="191" height="18"/>
+                                <rect key="frame" x="13" y="70" width="191" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/12/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-fj-ydY">
-                                <rect key="frame" x="13" y="87" width="59" height="13.5"/>
+                                <rect key="frame" x="13" y="91" width="59" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrc-Hm-jq6">
-                                <rect key="frame" x="281" y="60" width="58" height="30"/>
+                                <rect key="frame" x="281" y="64" width="58" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="sOL-g4-mXq"/>
                                 </constraints>

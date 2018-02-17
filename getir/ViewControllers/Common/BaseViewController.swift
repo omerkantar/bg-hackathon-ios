@@ -26,6 +26,7 @@ extension BaseViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 25.0, weight: .semibold), NSAttributedStringKey.foregroundColor: UIColor.darkGray]
         } 
     }
 }
