@@ -23,9 +23,9 @@ enum RequestTarget {
     case getMyTravels
     
     case createPack(pack: PackModel)
-    case createTravel(travel: ActivityStateModel)
+    case createTravel(travel: TravelModel)
     case createRequest(request: ActivityStateModel)
-    case createDeal(request: ActivityStateModel)
+    case createDeal(deal: ActivityStateModel)
     
     case putRequest(id: String, status: RequestStatusType)
     case putDeal(id: String, status: DetalStatusType)
@@ -105,6 +105,21 @@ extension RequestTarget: TargetType {
             if let id = UserModel.current.id {
                 return ["u": id]
             }
+        case .createRequest(let request):
+            return request.parameters
+        case .createDeal(let deal):
+            return deal.parameters
+            
+        case .createTravel(let travel):
+            return travel.parameters
+        case .createPack(let pack):
+            return pack.parameters
+            
+        case .putRequest(_, let status):
+            return ["status": status.rawValue]
+        case .putDeal(_, let status):
+            return ["status": status.rawValue]
+            
         default:
             break
         }

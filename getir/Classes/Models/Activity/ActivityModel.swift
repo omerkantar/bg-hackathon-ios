@@ -37,4 +37,23 @@ class ActivityModel: BaseModel {
         from <- map["from"]
         user <- map["user"]
     }
+    
+    
+    var parameters: [String: Any] {
+        var params = [String: Any]()
+        if let from = from {
+            params["from"] = from
+        }
+        if let to = to {
+            params["to"] = to
+        }
+        params["weight"] = weight
+        
+        if self is TravelModel {
+            if let date = (self as? TravelModel)?.date {
+                params["date"] = date
+            }
+        }
+        return params
+    }
 }

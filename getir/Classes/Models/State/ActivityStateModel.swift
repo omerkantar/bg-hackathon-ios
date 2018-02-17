@@ -28,4 +28,24 @@ class ActivityStateModel: BaseModel {
         pack <- map["pack"]
         status <- map["status"]
     }
+    
+    
+    var parameters: [String: Any] {
+        
+        var params = [String: Any]()
+        
+        if let id = UserModel.current.id {
+            params["created_by"] = id
+        }
+        
+        if let id = travel?.id {
+            params["travel"] = id
+        }
+        
+        if let id = pack?.id {
+            params["pack"] = id
+        }
+        
+        return params
+    }
 }

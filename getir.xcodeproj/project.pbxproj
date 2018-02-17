@@ -50,6 +50,7 @@
 		4E92F38D20385D960020C709 /* ActivityStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38C20385D960020C709 /* ActivityStateModel.swift */; };
 		4E92F38F20385E5B0020C709 /* RequestStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F38E20385E5B0020C709 /* RequestStateModel.swift */; };
 		4E92F39120385FBB0020C709 /* DealStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F39020385FBB0020C709 /* DealStateModel.swift */; };
+		4E92F3942038A3C90020C709 /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3932038A3C90020C709 /* CreateActivityViewController.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		4E92F38C20385D960020C709 /* ActivityStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStateModel.swift; sourceTree = "<group>"; };
 		4E92F38E20385E5B0020C709 /* RequestStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStateModel.swift; sourceTree = "<group>"; };
 		4E92F39020385FBB0020C709 /* DealStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealStateModel.swift; sourceTree = "<group>"; };
+		4E92F3932038A3C90020C709 /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		4E92F31620375C1D0020C709 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F3922038A3AE0020C709 /* Create */,
 				4E92F373203835C70020C709 /* Selection */,
 				4E92F3622037C8F50020C709 /* Filter */,
 				4E92F3462037AA500020C709 /* Tabs */,
@@ -425,6 +428,14 @@
 				4E92F39020385FBB0020C709 /* DealStateModel.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		4E92F3922038A3AE0020C709 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F3932038A3C90020C709 /* CreateActivityViewController.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -827,6 +838,7 @@
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
 				4E92F3832038551A0020C709 /* SelectRequestCellViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
+				4E92F3942038A3C90020C709 /* CreateActivityViewController.swift in Sources */,
 				4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
