@@ -14,6 +14,17 @@
 		4E92F32A203764670020C709 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F329203764670020C709 /* LoadingView.swift */; };
 		4E92F32D203769790020C709 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F32C203769790020C709 /* LocationManager.swift */; };
 		4E92F32F20376A830020C709 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F32E20376A830020C709 /* MapViewController.swift */; };
+		4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F33120379F870020C709 /* CommonTableViewController.swift */; };
+		4E92F3372037A0680020C709 /* PackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3352037A0680020C709 /* PackTableViewCell.swift */; };
+		4E92F3382037A0680020C709 /* PackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F3362037A0680020C709 /* PackTableViewCell.xib */; };
+		4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F33A2037A6640020C709 /* StateTableViewCell.swift */; };
+		4E92F33D2037A6640020C709 /* StateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F33B2037A6640020C709 /* StateTableViewCell.xib */; };
+		4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F33F2037A6880020C709 /* CommonTableViewCell.swift */; };
+		4E92F3442037A8CD0020C709 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3422037A8CD0020C709 /* TravelTableViewCell.swift */; };
+		4E92F3452037A8CD0020C709 /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F3432037A8CD0020C709 /* TravelTableViewCell.xib */; };
+		4E92F3482037AA710020C709 /* PackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3472037AA710020C709 /* PackTableViewController.swift */; };
+		4E92F34A2037AA810020C709 /* StateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3492037AA810020C709 /* StateTableViewController.swift */; };
+		4E92F34C2037AA8F0020C709 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -52,6 +63,17 @@
 		4E92F329203764670020C709 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E92F32C203769790020C709 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4E92F32E20376A830020C709 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4E92F33120379F870020C709 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
+		4E92F3352037A0680020C709 /* PackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTableViewCell.swift; sourceTree = "<group>"; };
+		4E92F3362037A0680020C709 /* PackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackTableViewCell.xib; sourceTree = "<group>"; };
+		4E92F33A2037A6640020C709 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		4E92F33B2037A6640020C709 /* StateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateTableViewCell.xib; sourceTree = "<group>"; };
+		4E92F33F2037A6880020C709 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		4E92F3422037A8CD0020C709 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		4E92F3432037A8CD0020C709 /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
+		4E92F3472037AA710020C709 /* PackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTableViewController.swift; sourceTree = "<group>"; };
+		4E92F3492037AA810020C709 /* StateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewController.swift; sourceTree = "<group>"; };
+		4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,7 +126,7 @@
 		4E92F31620375C1D0020C709 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E92F330203782BE0020C709 /* Selection */,
+				4E92F3462037AA500020C709 /* Tabs */,
 				4E92F32B203768360020C709 /* Map */,
 				4E92F31C20375CA20020C709 /* Common */,
 			);
@@ -121,6 +143,7 @@
 		4E92F31820375C270020C709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F3332037A0120020C709 /* Cells */,
 				4E92F328203764580020C709 /* LoadingView */,
 			);
 			path = Views;
@@ -150,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4E92F31D20375CB30020C709 /* BaseViewController.swift */,
+				4E92F33120379F870020C709 /* CommonTableViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,11 +216,60 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		4E92F330203782BE0020C709 /* Selection */ = {
+		4E92F3332037A0120020C709 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F33E2037A6740020C709 /* Common */,
+				4E92F3412037A8BC0020C709 /* Travel */,
+				4E92F3392037A6580020C709 /* State */,
+				4E92F3342037A0170020C709 /* Pack */,
 			);
-			path = Selection;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4E92F3342037A0170020C709 /* Pack */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F3352037A0680020C709 /* PackTableViewCell.swift */,
+				4E92F3362037A0680020C709 /* PackTableViewCell.xib */,
+			);
+			path = Pack;
+			sourceTree = "<group>";
+		};
+		4E92F3392037A6580020C709 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F33A2037A6640020C709 /* StateTableViewCell.swift */,
+				4E92F33B2037A6640020C709 /* StateTableViewCell.xib */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		4E92F33E2037A6740020C709 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F33F2037A6880020C709 /* CommonTableViewCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4E92F3412037A8BC0020C709 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F3422037A8CD0020C709 /* TravelTableViewCell.swift */,
+				4E92F3432037A8CD0020C709 /* TravelTableViewCell.xib */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		4E92F3462037AA500020C709 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F3472037AA710020C709 /* PackTableViewController.swift */,
+				4E92F3492037AA810020C709 /* StateTableViewController.swift */,
+				4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -395,7 +468,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E92F33D2037A6640020C709 /* StateTableViewCell.xib in Resources */,
+				4E92F3382037A0680020C709 /* PackTableViewCell.xib in Resources */,
 				4EC3D6D420375545007818D9 /* LaunchScreen.storyboard in Resources */,
+				4E92F3452037A8CD0020C709 /* TravelTableViewCell.xib in Resources */,
 				4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */,
 				4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */,
 			);
@@ -578,14 +654,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E92F34A2037AA810020C709 /* StateTableViewController.swift in Sources */,
+				4E92F3482037AA710020C709 /* PackTableViewController.swift in Sources */,
+				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
+				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
 				4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */,
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
+				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
 				4E92F31E20375CB30020C709 /* BaseViewController.swift in Sources */,
 				4E92F324203761D10020C709 /* ResponseModel.swift in Sources */,
+				4E92F3442037A8CD0020C709 /* TravelTableViewCell.swift in Sources */,
 				4E92F32A203764670020C709 /* LoadingView.swift in Sources */,
+				4E92F3372037A0680020C709 /* PackTableViewCell.swift in Sources */,
 				4E92F32F20376A830020C709 /* MapViewController.swift in Sources */,
+				4E92F34C2037AA8F0020C709 /* TravelTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

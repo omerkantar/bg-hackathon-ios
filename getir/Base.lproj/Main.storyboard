@@ -10,46 +10,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Gelenler-->
+        <scene sceneID="Pzw-Lm-TEU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="5Tk-AM-Npf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2g-J5-uW5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sp0-8K-2VE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIT-Gs-S0c">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="gIT-Gs-S0c" firstAttribute="height" secondItem="Sp0-8K-2VE" secondAttribute="height" priority="750" id="8uy-bV-hB2"/>
-                                    <constraint firstItem="gIT-Gs-S0c" firstAttribute="width" secondItem="Sp0-8K-2VE" secondAttribute="width" id="WHn-7e-z0h"/>
-                                    <constraint firstAttribute="bottom" secondItem="gIT-Gs-S0c" secondAttribute="bottom" id="ak1-sT-AY8"/>
-                                    <constraint firstItem="gIT-Gs-S0c" firstAttribute="leading" secondItem="Sp0-8K-2VE" secondAttribute="leading" id="kxr-wX-GZo"/>
-                                    <constraint firstAttribute="trailing" secondItem="gIT-Gs-S0c" secondAttribute="trailing" id="nsZ-Q8-Hra"/>
-                                    <constraint firstItem="gIT-Gs-S0c" firstAttribute="top" secondItem="Sp0-8K-2VE" secondAttribute="top" id="zAh-nN-pdn"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Sp0-8K-2VE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vwn-6d-Mgu"/>
-                            <constraint firstItem="Sp0-8K-2VE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YcT-QQ-C8a"/>
-                            <constraint firstItem="Sp0-8K-2VE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kAh-Iw-RUK"/>
-                            <constraint firstItem="Sp0-8K-2VE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nzG-Bj-clQ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ohK-br-Byl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VBQ-FA-RP6"/>
+                    <tabBarItem key="tabBarItem" title="Gelenler" id="mLS-Qh-BPE"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyP-pM-cu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592.79999999999995" y="124.58770614692655"/>
+            <point key="canvasLocation" x="2617" y="475"/>
+        </scene>
+        <!--Gidenler-->
+        <scene sceneID="TOH-1u-hdw">
+            <objects>
+                <viewController id="BDh-qB-hMt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCA-Ux-Gi3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cNn-mn-p1e"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gidenler" id="tpj-09-8Sv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTQ-mj-vYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="-226"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Gqm-Bz-ka7">
+            <objects>
+                <tabBarController id="Mcw-vz-mpT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qJu-ZR-P0p"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9zg-pb-XUx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BDh-qB-hMt" kind="relationship" relationship="viewControllers" id="B2l-2u-2GE"/>
+                        <segue destination="5Tk-AM-Npf" kind="relationship" relationship="viewControllers" id="UZD-tf-xsP"/>
+                        <segue destination="EfS-qy-QfC" kind="relationship" relationship="viewControllers" id="4Mw-UL-Jx3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bC1-I1-uno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aht-Bf-bcl">
@@ -69,12 +80,28 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="niF-BN-bDh"/>
+                        <segue destination="Mcw-vz-mpT" kind="relationship" relationship="rootViewController" id="54A-9K-TpP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsf-hA-KXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="125"/>
+            <point key="canvasLocation" x="690" y="107"/>
+        </scene>
+        <!--Durum-->
+        <scene sceneID="1kW-J5-ZYr">
+            <objects>
+                <viewController id="EfS-qy-QfC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xRC-X0-wLs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rMB-9W-QUZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Durum" id="m1I-R0-d7g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGJ-zT-ecR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="862"/>
         </scene>
     </scenes>
 </document>

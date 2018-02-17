@@ -19,7 +19,6 @@ class MapViewController: UIViewController {
     }
     
     // MARK: - Build
-    
     func build() {
         
     }

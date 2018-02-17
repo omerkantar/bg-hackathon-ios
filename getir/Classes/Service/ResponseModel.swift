@@ -35,7 +35,11 @@ class ResponseModel: Mappable {
         switch type {
         case .unauthorization:
             model.message = ""
-            return model
+            break
+        case .notFound:
+            model.message = "Not Found"
+            model.statusCode = 404
+            break
         default:
             break
         }
@@ -48,4 +52,5 @@ enum ResponseErrorType: Int {
     case json = -1000
     case mapping = -1001
     case unauthorization = 401 // Unauthorization
+    case notFound = 404
 }
