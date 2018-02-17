@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PXy-eF-3hN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mcw-vz-mpT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,37 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gelenler-->
+        <!--Gezginler-->
         <scene sceneID="Pzw-Lm-TEU">
             <objects>
-                <viewController id="5Tk-AM-Npf" sceneMemberID="viewController">
+                <viewController id="5Tk-AM-Npf" customClass="TravelTableViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2g-J5-uW5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CUI-54-h36">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CUI-54-h36" firstAttribute="top" secondItem="g2g-J5-uW5" secondAttribute="top" id="F9O-sU-0hS"/>
+                            <constraint firstItem="CUI-54-h36" firstAttribute="leading" secondItem="ohK-br-Byl" secondAttribute="leading" id="Id7-Lx-BVx"/>
+                            <constraint firstItem="ohK-br-Byl" firstAttribute="bottom" secondItem="CUI-54-h36" secondAttribute="bottom" id="ZSs-Ns-LkF"/>
+                            <constraint firstAttribute="trailing" secondItem="CUI-54-h36" secondAttribute="trailing" id="xWz-TV-XbR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ohK-br-Byl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gelenler" id="mLS-Qh-BPE"/>
+                    <tabBarItem key="tabBarItem" title="Gezginler" id="mLS-Qh-BPE"/>
+                    <navigationItem key="navigationItem" title="Gezginler" id="bsp-6s-rPN">
+                        <barButtonItem key="rightBarButtonItem" title="Filtre" style="plain" id="wbY-iU-1sm">
+                            <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="CUI-54-h36" id="b4l-15-uAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyP-pM-cu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="475"/>
+            <point key="canvasLocation" x="3292" y="448"/>
         </scene>
-        <!--Gidenler-->
+        <!--Paketler-->
         <scene sceneID="TOH-1u-hdw">
             <objects>
-                <viewController id="BDh-qB-hMt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dCA-Ux-Gi3">
+                <viewController id="BDh-qB-hMt" customClass="PackTableViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bAc-Tt-nNl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="cNn-mn-p1e"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Gidenler" id="tpj-09-8Sv"/>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Paketler" id="tpj-09-8Sv"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Paketler" id="gRh-zT-PGO">
+                        <barButtonItem key="rightBarButtonItem" title="Filtre" style="plain" id="pQ8-gr-4JN">
+                            <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="bAc-Tt-nNl" id="RQR-jB-joZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTQ-mj-vYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="-226"/>
+            <point key="canvasLocation" x="3274" y="-239"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gqm-Bz-ka7">
@@ -51,21 +80,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BDh-qB-hMt" kind="relationship" relationship="viewControllers" id="B2l-2u-2GE"/>
-                        <segue destination="5Tk-AM-Npf" kind="relationship" relationship="viewControllers" id="UZD-tf-xsP"/>
-                        <segue destination="EfS-qy-QfC" kind="relationship" relationship="viewControllers" id="4Mw-UL-Jx3"/>
+                        <segue destination="PXy-eF-3hN" kind="relationship" relationship="viewControllers" id="z7w-pl-dyx"/>
+                        <segue destination="B2Z-zu-RET" kind="relationship" relationship="viewControllers" id="WNc-GJ-jyF"/>
+                        <segue destination="HcW-bg-Vxd" kind="relationship" relationship="viewControllers" id="seX-B2-QEF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bC1-I1-uno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="107"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="aht-Bf-bcl">
             <objects>
                 <navigationController id="PXy-eF-3hN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9Co-zk-dds"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oWg-yC-9ws">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,28 +112,96 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="Mcw-vz-mpT" kind="relationship" relationship="rootViewController" id="54A-9K-TpP"/>
+                        <segue destination="BDh-qB-hMt" kind="relationship" relationship="rootViewController" id="uKc-N1-7qc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsf-hA-KXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="107"/>
+            <point key="canvasLocation" x="2423" y="-231"/>
         </scene>
-        <!--Durum-->
+        <!--Güncel Durumlar-->
         <scene sceneID="1kW-J5-ZYr">
             <objects>
-                <viewController id="EfS-qy-QfC" sceneMemberID="viewController">
+                <viewController id="EfS-qy-QfC" customClass="StateTableViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRC-X0-wLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="waZ-qc-ltk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="waZ-qc-ltk" firstAttribute="trailing" secondItem="rMB-9W-QUZ" secondAttribute="trailing" id="8TG-HU-I4a"/>
+                            <constraint firstItem="waZ-qc-ltk" firstAttribute="leading" secondItem="rMB-9W-QUZ" secondAttribute="leading" id="NT3-NC-9sk"/>
+                            <constraint firstItem="waZ-qc-ltk" firstAttribute="bottom" secondItem="rMB-9W-QUZ" secondAttribute="bottom" id="aMe-NG-tMr"/>
+                            <constraint firstItem="waZ-qc-ltk" firstAttribute="top" secondItem="rMB-9W-QUZ" secondAttribute="top" id="kdr-zm-j2u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rMB-9W-QUZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Durum" id="m1I-R0-d7g"/>
+                    <tabBarItem key="tabBarItem" title="Güncel Durumlar" id="m1I-R0-d7g"/>
+                    <navigationItem key="navigationItem" id="ekQ-9I-xIq"/>
+                    <connections>
+                        <outlet property="tableView" destination="waZ-qc-ltk" id="1pM-42-Dcr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGJ-zT-ecR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="862"/>
+            <point key="canvasLocation" x="3292" y="1155"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qR3-zy-OD0">
+            <objects>
+                <navigationController id="B2Z-zu-RET" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fNX-OH-myU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="LpB-x8-iR6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Tk-AM-Npf" kind="relationship" relationship="rootViewController" id="fsL-BR-Xyf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D89-2Y-JRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="448"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="4Cg-RD-xlI">
+            <objects>
+                <navigationController id="HcW-bg-Vxd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gba-ZW-6fh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NgR-c7-AfC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EfS-qy-QfC" kind="relationship" relationship="rootViewController" id="WCw-Ax-ZrW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HT-W1-2pL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="1155"/>
         </scene>
     </scenes>
 </document>
