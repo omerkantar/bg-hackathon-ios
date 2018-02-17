@@ -25,6 +25,8 @@ class CommonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
         if let containerView = containerView {
+            containerView.layer.borderColor = UIColor.groupTableViewBackground.withAlphaComponent(0.34).cgColor
+            containerView.layer.borderWidth = 1.0
             containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(0.2)
             containerView.layer.cornerRadius = 3.0
         }
@@ -72,6 +74,22 @@ class CommonTableViewCell: UITableViewCell {
         if let usernameLabel = usernameLabel {
             usernameLabel.text = viewModel.usernameText
         }
+        
+        // NE olur ne olmaz force kullanmayalim child cell'den kaynakli
+        self.userImageView?.image = nil
+        if let imageUrl = viewModel.userPhotoUrl,
+            let photoImageView = self.userImageView {
+            photoImageView.af_setImage(withURL: imageUrl)
+        }
+        
+        if let directionLabel = directionLabel {
+            directionLabel.text = viewModel.directionText
+        }
+        
+        if let weightLabel = weightLabel {
+            weightLabel.text = viewModel.weightText
+        }
+    
     }
 
 }

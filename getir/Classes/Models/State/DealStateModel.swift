@@ -9,6 +9,8 @@
 import UIKit
 import ObjectMapper
 
+// MARK: - Çok katmanlı Model 🧝‍♂️ DealStateMode -> ActivitySateModel -> BaseModel
+
 enum DetalStatusType: String {
     case none = "none"
     case waiting = "WAITING"
@@ -18,7 +20,6 @@ enum DetalStatusType: String {
 
 class DealStateModel: ActivityStateModel {
 
-    
     var statusType: DetalStatusType {
         if let status = self.status,
             let type = DetalStatusType(rawValue: status) {
@@ -31,7 +32,5 @@ class DealStateModel: ActivityStateModel {
         super.mapping(map: map)
         self.type = .deal
     }
-    
-    
     
 }

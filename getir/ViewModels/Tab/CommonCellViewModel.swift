@@ -10,10 +10,18 @@ import UIKit
 
 class CommonCellViewModel {
 
+    var activityModel: ActivityModel
     var usernameText: String?
+    var userPhotoUrl: URL?
     var directionText: String?
+    var weightText: String?
+    var dateText: String?
     
-    init() {
-        
+    init(activity: ActivityModel) {
+        self.activityModel = activity
+        self.usernameText = activity.user?.name
+        self.userPhotoUrl = activity.user?.photo?.imageURL
+        self.directionText = activity.direction
+        self.weightText = "\(activity.weight)\nkg"
     }
 }

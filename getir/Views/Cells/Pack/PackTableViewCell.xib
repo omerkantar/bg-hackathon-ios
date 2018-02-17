@@ -79,30 +79,23 @@
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 Şubat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juc-Xf-Ehf">
-                                <rect key="frame" x="13" y="72.5" width="61" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G1w-cV-Her" secondAttribute="bottom" constant="12" id="5UZ-qn-gAv"/>
                             <constraint firstItem="G1w-cV-Her" firstAttribute="top" secondItem="WAS-ca-oPd" secondAttribute="bottom" constant="8" id="9fd-XD-2OA"/>
                             <constraint firstItem="dFf-Jv-IOH" firstAttribute="centerY" secondItem="QU1-N4-ALK" secondAttribute="centerY" id="Jm8-YU-gfv"/>
                             <constraint firstItem="WAS-ca-oPd" firstAttribute="top" secondItem="iv2-ZN-1wy" secondAttribute="bottom" constant="4" id="NWW-aU-gDx"/>
                             <constraint firstItem="WAS-ca-oPd" firstAttribute="leading" secondItem="uY9-eU-ZL9" secondAttribute="leading" id="P16-yz-Tlw"/>
-                            <constraint firstItem="Juc-Xf-Ehf" firstAttribute="leading" secondItem="G1w-cV-Her" secondAttribute="leading" id="SXi-iv-6Ho"/>
                             <constraint firstItem="dFf-Jv-IOH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G1w-cV-Her" secondAttribute="trailing" constant="12" id="Sge-l0-CcS"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="leading" secondItem="iv2-ZN-1wy" secondAttribute="trailing" constant="3" id="X0b-iM-ZDe"/>
-                            <constraint firstItem="Juc-Xf-Ehf" firstAttribute="top" secondItem="G1w-cV-Her" secondAttribute="bottom" constant="4" id="f70-DL-yc2"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="centerY" secondItem="iv2-ZN-1wy" secondAttribute="centerY" id="gbI-1p-sTy"/>
+                            <constraint firstItem="dFf-Jv-IOH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QU1-N4-ALK" secondAttribute="top" constant="15" id="lG3-gE-PvS"/>
                             <constraint firstItem="iv2-ZN-1wy" firstAttribute="leading" secondItem="QU1-N4-ALK" secondAttribute="leading" constant="12" id="lTC-iU-AYd"/>
                             <constraint firstAttribute="trailing" secondItem="dFf-Jv-IOH" secondAttribute="trailing" constant="16" id="nzZ-o7-gN2"/>
                             <constraint firstItem="G1w-cV-Her" firstAttribute="leading" secondItem="WAS-ca-oPd" secondAttribute="leading" id="oZC-xZ-qCf"/>
                             <constraint firstItem="iv2-ZN-1wy" firstAttribute="top" secondItem="QU1-N4-ALK" secondAttribute="top" constant="6" id="s2S-Hm-v7n"/>
                             <constraint firstAttribute="trailing" secondItem="WAS-ca-oPd" secondAttribute="trailing" constant="120" id="xnc-QX-02l"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Juc-Xf-Ehf" secondAttribute="bottom" constant="8" id="y0F-BQ-pbj"/>
                         </constraints>
                     </view>
                 </subviews>

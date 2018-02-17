@@ -16,5 +16,4 @@ class StateTableViewController: CommonTableViewController {
         super.viewDidLoad()
     }
     
-    // MARK: 
 }

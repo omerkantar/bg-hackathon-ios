@@ -10,7 +10,7 @@ import UIKit
 import Moya
 
 fileprivate let kLocalBaseUrl = "http://192.168.88.159:8080/v1/deals"
-fileprivate let kDigitalOceanBaseUrl = "http://174.138.7.62/v1/"
+fileprivate let kDigitalOceanBaseUrl = "http://174.138.7.62/v1"
 
 
 enum RequestTarget {

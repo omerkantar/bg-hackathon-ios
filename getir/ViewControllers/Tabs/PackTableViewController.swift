@@ -13,6 +13,8 @@ class PackTableViewController: CommonTableViewController {
     
     var filter: FilterModel = FilterModel()
     
+    var viewModel = PackTableViewModel()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         self.type = .pack
@@ -21,8 +23,10 @@ class PackTableViewController: CommonTableViewController {
     
     // MARK: - Load Data
     override func loadData() {
-        self.request(target: .users, loadingView: self.tableView, isShowingError: true) { (response) in
-            
+        self.request(target: .getPacks(filter: filter), loadingView: self.tableView, isShowingError: true) { (response) in
+            self.viewModel.build(responseModel: response)
+            self.cellVMs = self.viewModel.cellVMs
+            self.tableView.reloadData()
         }
     }
     

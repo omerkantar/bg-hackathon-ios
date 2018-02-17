@@ -17,9 +17,8 @@ class PackTableViewModel: BaseViewModel {
         if let packs = Mapper<PackModel>().mapArray(JSONObject: responseModel.data) {
             cellVMs.removeAll()
             for pack in packs {
-                
+                cellVMs.append(PackCellViewModel(activity: pack))
             }
-            
         }
     }
 }

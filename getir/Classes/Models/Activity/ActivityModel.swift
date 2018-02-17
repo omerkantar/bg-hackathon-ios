@@ -9,7 +9,6 @@
 import UIKit
 import ObjectMapper
 
-
 class ActivityModel: BaseModel {
     
     var weight: Int = 0
@@ -17,10 +16,17 @@ class ActivityModel: BaseModel {
     var to: String?
     var from: String?
     
+    var direction: String? {
+        if let to = to, let from = from {
+            return "\(from)'dan \(to)'ya"
+        }
+        return ""
+    }
     override func mapping(map: Map) {
         super.mapping(map: map)
         weight <- map["weight"]
         to <- map["to"]
         from <- map["from"]
+        user <- map["user"]
     }
 }

@@ -24,6 +24,7 @@ class CommonTableViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildTableView()
+        loadData()
     }
     
     // MARK: - Build

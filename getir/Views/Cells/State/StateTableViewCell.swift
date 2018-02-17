@@ -13,7 +13,6 @@ class StateTableViewCell: CommonTableViewCell {
     @IBOutlet weak var requestTypeLabel: UILabel!
 
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
