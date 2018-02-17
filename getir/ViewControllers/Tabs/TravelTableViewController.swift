@@ -37,6 +37,12 @@ class TravelTableViewController: CommonTableViewController {
             self.tableView.reloadData()
         }
     }
+    
+    override func refreshingData() {
+        self.filter = FilterModel()
+        self.loadData()
+    }
+    
     // MARK: - Action
     @IBAction func filterButtonTapped() {
         self.presentFilterVC(delegate: self)
@@ -56,6 +62,6 @@ extension TravelTableViewController: FilterDelegate {
     
     func updateFilterModel(_ filterModel: FilterModel) {
         self.filter = filterModel
-        
+        self.loadData()
     }
 }

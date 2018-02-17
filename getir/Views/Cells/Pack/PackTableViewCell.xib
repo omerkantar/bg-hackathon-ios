@@ -43,7 +43,7 @@
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="top" secondItem="dFf-Jv-IOH" secondAttribute="top" constant="5" id="xpb-ZM-NeO"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-qs-Lr9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-qs-Lr9">
                                 <rect key="frame" x="51" y="15" width="45" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,6 +95,7 @@
                             <constraint firstAttribute="trailing" secondItem="dFf-Jv-IOH" secondAttribute="trailing" constant="16" id="nzZ-o7-gN2"/>
                             <constraint firstItem="G1w-cV-Her" firstAttribute="leading" secondItem="WAS-ca-oPd" secondAttribute="leading" id="oZC-xZ-qCf"/>
                             <constraint firstItem="iv2-ZN-1wy" firstAttribute="top" secondItem="QU1-N4-ALK" secondAttribute="top" constant="6" id="s2S-Hm-v7n"/>
+                            <constraint firstItem="dFf-Jv-IOH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nIc-qs-Lr9" secondAttribute="trailing" constant="8" id="wE5-6Z-dGY"/>
                             <constraint firstAttribute="trailing" secondItem="WAS-ca-oPd" secondAttribute="trailing" constant="120" id="xnc-QX-02l"/>
                         </constraints>
                     </view>

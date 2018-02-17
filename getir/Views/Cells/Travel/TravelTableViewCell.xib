@@ -43,7 +43,7 @@
                                     <constraint firstItem="TgK-fc-tSZ" firstAttribute="top" secondItem="M4J-jW-Lbu" secondAttribute="top" constant="5" id="bco-oN-IWa"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-R8-nRb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-R8-nRb">
                                 <rect key="frame" x="51" y="17" width="45" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,6 +89,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k1x-kN-Pgq" firstAttribute="top" secondItem="aZq-OL-Szc" secondAttribute="bottom" constant="5" id="0ey-Gf-HTP"/>
+                            <constraint firstItem="M4J-jW-Lbu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pPR-R8-nRb" secondAttribute="trailing" constant="8" id="167-eJ-7qt"/>
                             <constraint firstItem="aZq-OL-Szc" firstAttribute="top" secondItem="wna-M9-r9t" secondAttribute="bottom" constant="8" id="55Y-cX-Bn4"/>
                             <constraint firstItem="aZq-OL-Szc" firstAttribute="leading" secondItem="wna-M9-r9t" secondAttribute="leading" id="6lT-Jt-qnk"/>
                             <constraint firstItem="M4J-jW-Lbu" firstAttribute="centerY" secondItem="eiG-Zp-iXM" secondAttribute="centerY" id="7Z4-In-evl"/>

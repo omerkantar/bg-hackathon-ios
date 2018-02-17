@@ -36,7 +36,7 @@ class CommonTableViewController: BaseViewController {
         tableView.register(UINib(nibName: self.type.cellIdentifier, bundle: nil), forCellReuseIdentifier: self.type.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
-        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshingData), for: .valueChanged)
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
         } else {
@@ -45,6 +45,10 @@ class CommonTableViewController: BaseViewController {
     }
     
     // MARK: -
+    
+    @objc func refreshingData() {
+        
+    }
 }
 
 

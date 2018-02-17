@@ -30,6 +30,11 @@ class PackTableViewController: CommonTableViewController {
         }
     }
     
+    override func refreshingData() {
+        self.filter = FilterModel()
+        self.loadData()
+    }
+    
     // MARK: - Action
     @IBAction func filterButtonTapped() {
         self.presentFilterVC(delegate: self)
@@ -48,6 +53,7 @@ extension PackTableViewController: FilterDelegate {
     
     func updateFilterModel(_ filterModel: FilterModel) {
         self.filter = filterModel
+        self.loadData()
     }
 }
 

@@ -67,6 +67,8 @@ extension FilterViewController {
                 self.dateInformationLabel.text = "Paketin gönderileceği tarihi giriniz."
                 self.startDateTextField.placeholder = "Gönderilecek tarih"
                 self.endDateTextField.isHidden = true
+                self.startDateTextField.isHidden = true
+                self.dateInformationLabel.isHidden = true
                 break
             case .travel:
                 self.dateInformationLabel.text = "Gezginlerin hareket ettiği tarihi ya da belirli bir tarih aralığını giriniz."
