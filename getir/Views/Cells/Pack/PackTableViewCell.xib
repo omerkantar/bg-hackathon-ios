@@ -44,13 +44,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Murat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-qs-Lr9">
-                                <rect key="frame" x="43" y="14.5" width="37.5" height="16"/>
+                                <rect key="frame" x="43" y="12.5" width="37.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-ZN-1wy">
-                                <rect key="frame" x="12" y="8" width="28" height="28"/>
+                                <rect key="frame" x="12" y="6" width="28" height="28"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-eU-ZL9">
                                         <rect key="frame" x="1" y="1" width="26" height="26"/>
@@ -67,14 +67,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAS-ca-oPd">
-                                <rect key="frame" x="13" y="37" width="171" height="0.5"/>
+                                <rect key="frame" x="13" y="38" width="171" height="0.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="kct-gD-OkG"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ankara'dan 🚃 Istanbul'a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1w-cV-Her">
-                                <rect key="frame" x="13" y="45" width="176" height="18"/>
+                                <rect key="frame" x="13" y="46" width="176" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,14 +84,14 @@
                         <constraints>
                             <constraint firstItem="G1w-cV-Her" firstAttribute="top" secondItem="WAS-ca-oPd" secondAttribute="bottom" constant="8" id="9fd-XD-2OA"/>
                             <constraint firstItem="dFf-Jv-IOH" firstAttribute="centerY" secondItem="QU1-N4-ALK" secondAttribute="centerY" id="Jm8-YU-gfv"/>
-                            <constraint firstItem="WAS-ca-oPd" firstAttribute="top" secondItem="iv2-ZN-1wy" secondAttribute="bottom" constant="1" id="NWW-aU-gDx"/>
+                            <constraint firstItem="WAS-ca-oPd" firstAttribute="top" secondItem="iv2-ZN-1wy" secondAttribute="bottom" constant="4" id="NWW-aU-gDx"/>
                             <constraint firstItem="WAS-ca-oPd" firstAttribute="leading" secondItem="uY9-eU-ZL9" secondAttribute="leading" id="P16-yz-Tlw"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="leading" secondItem="iv2-ZN-1wy" secondAttribute="trailing" constant="3" id="X0b-iM-ZDe"/>
                             <constraint firstItem="nIc-qs-Lr9" firstAttribute="centerY" secondItem="iv2-ZN-1wy" secondAttribute="centerY" id="gbI-1p-sTy"/>
                             <constraint firstItem="iv2-ZN-1wy" firstAttribute="leading" secondItem="QU1-N4-ALK" secondAttribute="leading" constant="12" id="lTC-iU-AYd"/>
                             <constraint firstAttribute="trailing" secondItem="dFf-Jv-IOH" secondAttribute="trailing" constant="16" id="nzZ-o7-gN2"/>
                             <constraint firstItem="G1w-cV-Her" firstAttribute="leading" secondItem="WAS-ca-oPd" secondAttribute="leading" id="oZC-xZ-qCf"/>
-                            <constraint firstItem="iv2-ZN-1wy" firstAttribute="top" secondItem="QU1-N4-ALK" secondAttribute="top" constant="8" id="s2S-Hm-v7n"/>
+                            <constraint firstItem="iv2-ZN-1wy" firstAttribute="top" secondItem="QU1-N4-ALK" secondAttribute="top" constant="6" id="s2S-Hm-v7n"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G1w-cV-Her" secondAttribute="bottom" constant="8" id="urq-QB-Obn"/>
                             <constraint firstAttribute="trailing" secondItem="WAS-ca-oPd" secondAttribute="trailing" constant="120" id="xnc-QX-02l"/>
                         </constraints>

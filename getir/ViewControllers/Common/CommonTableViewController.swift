@@ -28,6 +28,7 @@ class CommonTableViewController: BaseViewController {
     
     // MARK: - Build
     func buildTableView() {
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = UIView()
         tableView.rowHeight = UITableViewAutomaticDimension
