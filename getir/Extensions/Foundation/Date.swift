@@ -14,4 +14,10 @@ extension Date {
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from: self)
     }
+    
+    var sortString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
+    }
 }

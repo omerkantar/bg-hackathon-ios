@@ -35,9 +35,11 @@
 		4E92F3642037C9190020C709 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3632037C9190020C709 /* FilterViewController.swift */; };
 		4E92F3662037F00A0020C709 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3652037F00A0020C709 /* FilterManager.swift */; };
 		4E92F3682037F0920020C709 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3672037F0920020C709 /* FilterModel.swift */; };
-		4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3692037F22A0020C709 /* BGTextField.swift */; };
 		4E92F36C2037FDA10020C709 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F36B2037FDA10020C709 /* TextField.swift */; };
 		4E92F371203813A60020C709 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F370203813A60020C709 /* Date.swift */; };
+		4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F37420383B760020C709 /* SelectRequestViewController.swift */; };
+		4E92F3772038405E0020C709 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3762038405E0020C709 /* UIViewController.swift */; };
+		4E92F379203842C70020C709 /* RequestStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E92F378203842C70020C709 /* RequestStateTableViewCell.xib */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -97,9 +99,11 @@
 		4E92F3632037C9190020C709 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		4E92F3652037F00A0020C709 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		4E92F3672037F0920020C709 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
-		4E92F3692037F22A0020C709 /* BGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGTextField.swift; sourceTree = "<group>"; };
 		4E92F36B2037FDA10020C709 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4E92F370203813A60020C709 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		4E92F37420383B760020C709 /* SelectRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestViewController.swift; sourceTree = "<group>"; };
+		4E92F3762038405E0020C709 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4E92F378203842C70020C709 /* RequestStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestStateTableViewCell.xib; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		4E92F31620375C1D0020C709 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F373203835C70020C709 /* Selection */,
 				4E92F3622037C8F50020C709 /* Filter */,
 				4E92F3462037AA500020C709 /* Tabs */,
 				4E92F32B203768360020C709 /* Map */,
@@ -175,7 +180,6 @@
 				4E92F3722038285F0020C709 /* New Group */,
 				4E92F3332037A0120020C709 /* Cells */,
 				4E92F328203764580020C709 /* LoadingView */,
-				4E92F3692037F22A0020C709 /* BGTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +282,7 @@
 			children = (
 				4E92F33A2037A6640020C709 /* StateTableViewCell.swift */,
 				4E92F33B2037A6640020C709 /* StateTableViewCell.xib */,
+				4E92F378203842C70020C709 /* RequestStateTableViewCell.xib */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				4E92F36B2037FDA10020C709 /* TextField.swift */,
+				4E92F3762038405E0020C709 /* UIViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -357,6 +363,14 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4E92F373203835C70020C709 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F37420383B760020C709 /* SelectRequestViewController.swift */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -556,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E92F33D2037A6640020C709 /* StateTableViewCell.xib in Resources */,
+				4E92F379203842C70020C709 /* RequestStateTableViewCell.xib in Resources */,
 				4E92F3382037A0680020C709 /* PackTableViewCell.xib in Resources */,
 				4EC3D6D420375545007818D9 /* LaunchScreen.storyboard in Resources */,
 				4E92F3452037A8CD0020C709 /* TravelTableViewCell.xib in Resources */,
@@ -755,13 +770,14 @@
 				4E92F36C2037FDA10020C709 /* TextField.swift in Sources */,
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
-				4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */,
+				4E92F37520383B760020C709 /* SelectRequestViewController.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
 				4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */,
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
 				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
+				4E92F3772038405E0020C709 /* UIViewController.swift in Sources */,
 				4E92F3682037F0920020C709 /* FilterModel.swift in Sources */,
 				4E92F34F2037B1CC0020C709 /* CommonCellViewModel.swift in Sources */,
 				4E92F31E20375CB30020C709 /* BaseViewController.swift in Sources */,

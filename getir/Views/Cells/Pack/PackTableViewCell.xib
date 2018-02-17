@@ -24,10 +24,10 @@
                         <rect key="frame" x="8" y="12" width="304" height="105.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFf-Jv-IOH">
-                                <rect key="frame" x="242" y="30" width="46" height="46"/>
+                                <rect key="frame" x="236" y="24" width="52" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30\nkg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-fc-Tha">
-                                        <rect key="frame" x="5" y="5" width="36" height="36"/>
+                                        <rect key="frame" x="5" y="5" width="42" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dFf-Jv-IOH" secondAttribute="height" multiplier="1:1" id="6eN-oL-UOj"/>
-                                    <constraint firstAttribute="width" constant="46" id="HP3-Mo-do5"/>
+                                    <constraint firstAttribute="width" constant="52" id="HP3-Mo-do5"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="centerX" secondItem="dFf-Jv-IOH" secondAttribute="centerX" id="JU1-tl-UhH"/>
+                                    <constraint firstAttribute="height" constant="58" id="UFT-G5-2cf"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="centerY" secondItem="dFf-Jv-IOH" secondAttribute="centerY" id="pBm-4w-q1i"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="leading" secondItem="dFf-Jv-IOH" secondAttribute="leading" constant="5" id="rdL-lU-2BI"/>
                                     <constraint firstItem="c5e-fc-Tha" firstAttribute="top" secondItem="dFf-Jv-IOH" secondAttribute="top" constant="5" id="xpb-ZM-NeO"/>

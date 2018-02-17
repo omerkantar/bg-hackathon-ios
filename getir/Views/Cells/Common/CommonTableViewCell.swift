@@ -30,7 +30,7 @@ class CommonTableViewCell: UITableViewCell {
         }
         
         if let weightContainerView = weightContainerView {
-            weightContainerView.layer.cornerRadius = weightContainerView.bounds.width / 2.0
+            weightContainerView.layer.cornerRadius = 20.0
             weightContainerView.layer.borderColor = UIColor.groupTableViewBackground.cgColor
             weightContainerView.layer.borderWidth = 1.0
         }
@@ -55,7 +55,7 @@ class CommonTableViewCell: UITableViewCell {
             var alpha: CGFloat = 0.2
             var scale: CGFloat = 1.0
             if highlighted {
-                // MARK: - 1989 Semih Ozturk anisina 😢
+                // MARK: - 1989 Meslektaşım, Semih Ozturk anisina 😢
                 scale = 0.98
                 alpha = 0.89
             }

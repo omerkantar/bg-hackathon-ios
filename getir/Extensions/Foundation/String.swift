@@ -15,8 +15,10 @@ extension String {
     var dateText: String {
         
         let dateFormatter = DateFormatter()
-        
-        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let date = dateFormatter.date(from: self) {
+            return date.string
+        }
         return ""
     }
 }

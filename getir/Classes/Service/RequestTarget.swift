@@ -9,7 +9,7 @@
 import UIKit
 import Moya
 
-fileprivate let kBaseUrl = "http://172.20.10.4:8080/v1"
+fileprivate let kLocalBaseUrl = "http://192.168.88.159:8080/v1/deals"
 
 enum RequestTarget {
     case coffee
@@ -25,7 +25,7 @@ extension RequestTarget: TargetType {
     
     var baseURL: URL {
         
-        if let url = URL(string: kBaseUrl) {
+        if let url = URL(string: kLocalBaseUrl) {
             return url
         }
         
@@ -43,6 +43,10 @@ extension RequestTarget: TargetType {
             return "/\(number)"
         case .users:
             return "/users"
+        case .getPacks:
+            return "/packs"
+        case .getTravels:
+            return "/travels"
         default:
             return ""
         }
@@ -61,6 +65,10 @@ extension RequestTarget: TargetType {
         switch self {
         case .call(let number):
             return ["number": number]
+        case .getPacks(let filter):
+            return filter.parameters
+        case .getTravels(let filter):
+            return filter.parameters
         default:
             break
         }

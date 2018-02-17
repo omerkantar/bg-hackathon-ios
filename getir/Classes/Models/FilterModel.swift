@@ -21,27 +21,28 @@ class FilterModel {
     var parameters: [String: Any]? {
         var parameters = [String: Any]()
         if let weight = weight {
-            parameters["weight"] = weight as Any
+            parameters["w"] = weight as Any
         }
-        if let startDate = startDate, let endDate = endDate {
+        if let startDate = startDate,
+            let endDate = endDate {
             parameters["startDate"] = startDate as Any
             parameters["endDate"] = endDate as Any
-        } else if let endDate = endDate {
-            parameters["endDate"] = endDate
         }
         
         if let fromPlace = fromPlace {
-            parameters["from"] = fromPlace
+            parameters["f"] = fromPlace
         }
         
         if let toPlace = toPlace {
-            parameters["to"] = toPlace
+            parameters["t"] = toPlace
         }
         
         if let date = sendDate {
-            
+            parameters["d"] = date.string
         }
-        
+        if parameters.keys.count == 0 {
+            return nil
+        }
         return parameters
     }
 }
