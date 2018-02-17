@@ -12,7 +12,7 @@ import ObjectMapper
 enum RequestStatusType: String {
     case none = "none"
     case pending = "PENDING"
-    case approut = "APPROUT"
+    case approved = "APPROVED"
     case rejected = "REJECTTED"
     
 }

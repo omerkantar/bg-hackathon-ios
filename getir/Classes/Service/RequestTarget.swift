@@ -27,6 +27,8 @@ enum RequestTarget {
     case createRequest(request: ActivityStateModel)
     case createDeal(request: ActivityStateModel)
     
+    case putRequest(id: String, status: RequestStatusType)
+    case putDeal(id: String, status: DetalStatusType)
     case getMyRequests
     case getMyDeals
 }
@@ -65,6 +67,10 @@ extension RequestTarget: TargetType {
         case .getMyRequests, .createRequest:
             return "/requests"
             
+        case .putDeal(let id, _):
+            return "/deals/\(id)"
+        case .putRequest(let id, _):
+            return "/requests/\(id)"
         default:
             return ""
         }
@@ -74,6 +80,8 @@ extension RequestTarget: TargetType {
         switch self {
         case .createRequest, .createDeal, .createTravel, .createPack:
             return Method.post
+        case .putRequest, .putDeal:
+            return Method.put
         default:
             break
         }
