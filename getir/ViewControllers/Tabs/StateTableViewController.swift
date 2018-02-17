@@ -15,4 +15,6 @@ class StateTableViewController: CommonTableViewController {
         self.type = .state
         super.viewDidLoad()
     }
+    
+    // MARK: 
 }

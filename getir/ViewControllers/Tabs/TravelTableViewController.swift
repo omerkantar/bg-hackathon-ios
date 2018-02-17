@@ -10,10 +10,35 @@ import UIKit
 
 class TravelTableViewController: CommonTableViewController {
 
+    
+    var filter = FilterModel()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         self.type = .travel
         super.viewDidLoad()
     }
 
+    
+    // MARK: - Action
+    @IBAction func filterButtonTapped() {
+        self.presentFilterVC(delegate: self)
+    }
+}
+
+
+// MARK: - FilterDelegate
+extension TravelTableViewController: FilterDelegate {
+    var filterType: FilterType {
+        return .travel
+    }
+    
+    func filterModel() -> FilterModel {
+        return self.filter
+    }
+    
+    func updateFilterModel(_ filterModel: FilterModel) {
+        self.filter = filterModel
+        
+    }
 }

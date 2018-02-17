@@ -10,6 +10,9 @@ import UIKit
 
 class PackTableViewController: CommonTableViewController {
 
+    
+    var filter: FilterModel = FilterModel()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         self.type = .pack
@@ -22,4 +25,25 @@ class PackTableViewController: CommonTableViewController {
             
         }
     }
+    
+    // MARK: - Action
+    @IBAction func filterButtonTapped() {
+        self.presentFilterVC(delegate: self)
+    }
 }
+
+
+extension PackTableViewController: FilterDelegate {
+    var filterType: FilterType {
+        return .pack
+    }
+
+    func filterModel() -> FilterModel {
+        return self.filter
+    }
+    
+    func updateFilterModel(_ filterModel: FilterModel) {
+        self.filter = filterModel
+    }
+}
+

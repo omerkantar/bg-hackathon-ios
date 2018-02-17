@@ -21,10 +21,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-Zp-iXM">
-                        <rect key="frame" x="8" y="12" width="304" height="99.5"/>
+                        <rect key="frame" x="8" y="8" width="304" height="103.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4J-jW-Lbu">
-                                <rect key="frame" x="242" y="27" width="46" height="46"/>
+                                <rect key="frame" x="242" y="29" width="46" height="46"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30kg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgK-fc-tSZ">
                                         <rect key="frame" x="5" y="5" width="36" height="36"/>
@@ -108,7 +108,7 @@
                     <constraint firstItem="eiG-Zp-iXM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0bf-gG-okd"/>
                     <constraint firstAttribute="bottom" secondItem="eiG-Zp-iXM" secondAttribute="bottom" constant="8" id="5OQ-1p-2Vd"/>
                     <constraint firstAttribute="trailing" secondItem="eiG-Zp-iXM" secondAttribute="trailing" constant="8" id="u3F-tR-95a"/>
-                    <constraint firstItem="eiG-Zp-iXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zT9-8Z-KbU"/>
+                    <constraint firstItem="eiG-Zp-iXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zT9-8Z-KbU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

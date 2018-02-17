@@ -8,11 +8,16 @@
 
 import UIKit
 
-protocol FilterProtocol {
+protocol FilterDelegate {
+    
+    var filterType: FilterType { get }
+    
+    func filterModel() -> FilterModel
+
+    func updateFilterModel(_ filterModel: FilterModel) -> Void
     
 }
 
 class FilterManager {
-
     
 }

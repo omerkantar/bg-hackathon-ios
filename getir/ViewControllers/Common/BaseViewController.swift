@@ -18,8 +18,6 @@ class BaseViewController: UIViewController {
         self.buildNavigationBar()
         self.loadData()
     }
-    
-    
 
 }
 
@@ -29,7 +27,6 @@ extension BaseViewController {
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
         } 
-
     }
 }
 
@@ -70,5 +67,15 @@ extension BaseViewController {
     }
 }
 
+// MARK: - Push&Present
+extension BaseViewController {
+    func presentFilterVC(delegate: FilterDelegate) {
+        let nc = self.storyboard?.instantiateViewController(withIdentifier: "filterNC") as! UINavigationController
+        if let rootVC = nc.viewControllers.first as? FilterViewController {
+            rootVC.delegate = delegate
+        }
+        self.present(nc, animated: true, completion: nil)
+    }
+}
 
 // MARK: - Alert & ActionSheet

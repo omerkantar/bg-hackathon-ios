@@ -22,6 +22,9 @@ class CommonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if let containerView = containerView {
+            
+        }
         
         if let weightContainerView = weightContainerView {
             weightContainerView.layer.cornerRadius = weightContainerView.bounds.width / 2.0
@@ -33,11 +36,7 @@ class CommonTableViewCell: UITableViewCell {
             userImageView.layer.cornerRadius = userImageView.bounds.width / 2.0
             userContainerView.layer.cornerRadius = userContainerView.bounds.width / 2.0
             userContainerView.backgroundColor = UIColor.groupTableViewBackground
-
         }
-        
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

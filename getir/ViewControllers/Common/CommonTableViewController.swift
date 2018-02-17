@@ -39,9 +39,11 @@ class CommonTableViewController: BaseViewController {
         tableView.addSubview(refreshControl)
     }
     
-    
-    
+    // MARK: -
 }
+
+
+
 
 // MARK: - UITableViewDataSource
 extension CommonTableViewController: UITableViewDataSource {
@@ -88,8 +90,6 @@ enum CommonTableViewType {
             return String(describing: StateTableViewCell.self)
         case .travel:
             return String(describing: TravelTableViewCell.self)
-        default:
-            break
         }
     }
     
