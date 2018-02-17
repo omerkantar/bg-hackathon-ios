@@ -33,19 +33,18 @@ class ActivityStateModel: BaseModel {
     var parameters: [String: Any] {
         
         var params = [String: Any]()
-        
         if let id = UserModel.current.id {
             params["created_by"] = id
         }
-        
         if let id = travel?.id {
             params["travel"] = id
         }
-        
         if let id = pack?.id {
             params["pack"] = id
         }
-        
+        if let id = UserModel.current.id {
+            params["user"] = id
+        }
         return params
     }
 }

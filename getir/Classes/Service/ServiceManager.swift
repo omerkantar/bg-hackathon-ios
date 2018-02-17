@@ -49,8 +49,8 @@ class ServiceManager {
                         do {
                             let body = try error.response?.mapJSON()
                             print(body)
-                        } catch {
-                            print(error)
+                        } catch let err {
+                            print(err)
                         }
                     }
                     

@@ -42,17 +42,20 @@ class ActivityModel: BaseModel {
     var parameters: [String: Any] {
         var params = [String: Any]()
         if let from = from {
-            params["from"] = from
+            params["from"] = from as Any
         }
         if let to = to {
-            params["to"] = to
+            params["to"] = to as Any
         }
-        params["weight"] = weight
+        params["weight"] = weight as Any
         
         if self is TravelModel {
             if let date = (self as? TravelModel)?.date {
-                params["date"] = date
+                params["date"] = date as Any
             }
+        }
+        if let id = UserModel.current.id {
+            params["user"] = id
         }
         return params
     }

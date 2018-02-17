@@ -72,7 +72,6 @@ class SelectRequestViewController: BaseViewController {
             vc.isTravel = !self.isMyPacks
             vc.model.from = self.selectedActivity?.from
             vc.model.to = self.selectedActivity?.to
-            vc.model.date = self.selectedActivity?.dateText
             self.present(nc, animated: false, completion: nil)
         }
         

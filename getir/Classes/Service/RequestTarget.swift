@@ -22,7 +22,7 @@ enum RequestTarget {
     case getMyPacks
     case getMyTravels
     
-    case createPack(pack: PackModel)
+    case createPack(pack: ActivityModel)
     case createTravel(travel: TravelModel)
     case createRequest(request: ActivityModel)
     case createDeal(deal: ActivityStateModel)
@@ -128,6 +128,9 @@ extension RequestTarget: TargetType {
     
     var task: Task {
         if let parameters = parameters {
+            if method == .post || method == .put {
+                return Task.requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            }
             return Task.requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
         return Task.requestPlain

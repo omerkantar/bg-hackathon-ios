@@ -52,6 +52,7 @@ extension BaseViewController {
     
     func request(target: RequestTarget, loadingView: UIView? = nil, isShowingError: Bool = false, success: NetworkSuccessBlock?) {
 
+        
         var animatingView: LoadingView?
         if let loadingView = loadingView {
             animatingView = LoadingView.show(parentView: loadingView)

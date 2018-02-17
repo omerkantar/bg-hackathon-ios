@@ -8,11 +8,15 @@
 
 import UIKit
 
-class StateTableViewController: CommonTableViewController {
+class StateTableViewController: BaseViewController {
 
+    @IBOutlet weak var requestsButton: UIButton!
+    @IBOutlet weak var dealsButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var containerView: UIView!
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
-        self.type = .state
         super.viewDidLoad()
     }
     

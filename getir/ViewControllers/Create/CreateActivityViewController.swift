@@ -43,14 +43,17 @@ class CreateActivityViewController: BaseViewController {
         weightTextField.delegate = self
         dateTextField.delegate = self
         
+        self.informationLabel.text = "Seyahat bilgilerinizi giriniz."
         if !isTravel {
+            self.informationLabel.text = "Paket bilgilerinizi giriniz."
             self.dateTextField.isHidden = true
         }
         
         fromTextField.text = model.from
         toTextField.text = model.to
-        dateTextField.text = model.date
         
+        createButton.hideTextWhenLoading = true
+        createButton.isLoading = false
     }
     
     // MARK: - Actions
@@ -59,9 +62,13 @@ class CreateActivityViewController: BaseViewController {
         let validate = validation()
         
         if validate.success {
-            
-            let target = isTravel ? RequestTarget.createTravel(travel: model) : RequestTarget.createRequest(request: model)
             createButton.isLoading = true
+            if let txt = weightTextField.text,
+                let weight = Int(txt) {
+                self.model.weight = weight
+            }
+
+            let target = isTravel ? RequestTarget.createTravel(travel: model) : RequestTarget.createPack(pack: model)
             request(target: target, success: { (response) in
                 self.createButton.isLoading = false
                 self.dismiss(animated: true, completion: nil)
@@ -94,7 +101,7 @@ class CreateActivityViewController: BaseViewController {
         }
         
         if isTravel {
-            if String.validation(string: dateTextField.text, minCharacters: 1) {
+            if model.date == nil || model.date == ""  {
                 return (false, message: "Lütfen ne zaman seyahet edeceğinizi giriniz.")
             }
         }
@@ -130,7 +137,7 @@ extension CreateActivityViewController: UITextFieldDelegate {
             datePicker.datePickerMode = .date
             textField.inputView = datePicker
             datePicker.minimumDate = Date()
-            datePicker.addTarget(self, action: #selector(FilterViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+            datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: UIControlEvents.valueChanged)
             
             
             return true
