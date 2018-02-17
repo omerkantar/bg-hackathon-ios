@@ -24,6 +24,7 @@ class BaseViewController: UIViewController {
 // MARK: - NavigationBar
 extension BaseViewController {
     func buildNavigationBar() {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
         } 

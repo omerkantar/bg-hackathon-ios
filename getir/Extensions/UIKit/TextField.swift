@@ -12,7 +12,7 @@ extension UITextField {
     
     func designing() {
         let view = UIView(frame: CGRect.zero)
-        view.frame.size.width = 20.0
+        view.frame.size.width = 10.0
         view.backgroundColor = .clear
         self.leftView = view
         self.rightView = view
