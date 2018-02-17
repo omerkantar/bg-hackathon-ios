@@ -22,13 +22,15 @@ class CommonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         if let containerView = containerView {
-            
+            containerView.backgroundColor = UIColor.groupTableViewBackground.withAlphaComponent(0.2)
+            containerView.layer.cornerRadius = 3.0
         }
         
         if let weightContainerView = weightContainerView {
             weightContainerView.layer.cornerRadius = weightContainerView.bounds.width / 2.0
-            weightContainerView.layer.borderColor = UIColor.gray.cgColor
+            weightContainerView.layer.borderColor = UIColor.groupTableViewBackground.cgColor
             weightContainerView.layer.borderWidth = 1.0
         }
         
