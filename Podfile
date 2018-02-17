@@ -4,6 +4,7 @@ use_frameworks!
 def all_pods
   pod 'Moya', '~> 11.0'
   pod 'ObjectMapper', '~> 3.1'
+  pod 'AlamofireImage', '~> 3.3'
 end
 
 target 'getir' do

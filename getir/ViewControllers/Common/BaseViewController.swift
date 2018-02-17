@@ -25,13 +25,18 @@ class BaseViewController: UIViewController {
 // MARK: - NavigationBar
 extension BaseViewController {
     func buildNavigationBar() {
-        
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        } 
+
     }
 }
 
 // MARK: - Request Controller
 
 extension BaseViewController {
+    
+    @objc func loadData() { }
     
     func request(target: RequestTarget, loadingView: UIView? = nil, isShowingError: Bool = false, success: NetworkSuccessBlock?) {
 

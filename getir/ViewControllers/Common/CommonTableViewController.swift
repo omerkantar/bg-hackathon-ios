@@ -14,7 +14,11 @@ class CommonTableViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl = UIRefreshControl()
+    
     var type: CommonTableViewType = .pack
+    
+    var cellVMs: [CommonCellViewModel]?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -26,16 +30,49 @@ class CommonTableViewController: BaseViewController {
     func buildTableView() {
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = UIView()
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(UINib(nibName: self.type.cellIdentifier, bundle: nil), forCellReuseIdentifier: self.type.cellIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        refreshControl.frame.origin.y = -20
+        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
+    
+    
     
 }
 
 // MARK: - UITableViewDataSource
-
+extension CommonTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let list = cellVMs {
+            return list.count
+        }
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.type.cellIdentifier, for: indexPath) as! CommonTableViewCell
+        if let vm = cellVMs?[indexPath.row] {
+            cell.build(viewModel: vm)
+        }
+        return cell
+    }
+}
 
 // MARK: - UITableViewDelegate
-
+extension CommonTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+}
 
 // MARK: - Enum
 enum CommonTableViewType {

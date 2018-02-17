@@ -25,6 +25,7 @@
 		4E92F3482037AA710020C709 /* PackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3472037AA710020C709 /* PackTableViewController.swift */; };
 		4E92F34A2037AA810020C709 /* StateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3492037AA810020C709 /* StateTableViewController.swift */; };
 		4E92F34C2037AA8F0020C709 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */; };
+		4E92F34F2037B1CC0020C709 /* CommonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F34E2037B1CC0020C709 /* CommonCellViewModel.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		4E92F3472037AA710020C709 /* PackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTableViewController.swift; sourceTree = "<group>"; };
 		4E92F3492037AA810020C709 /* StateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewController.swift; sourceTree = "<group>"; };
 		4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
+		4E92F34E2037B1CC0020C709 /* CommonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCellViewModel.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		4E92F31720375C220020C709 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4E92F34D2037B1AA0020C709 /* Tab */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -270,6 +273,14 @@
 				4E92F34B2037AA8F0020C709 /* TravelTableViewController.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		4E92F34D2037B1AA0020C709 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				4E92F34E2037B1CC0020C709 /* CommonCellViewModel.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		4EC3D6BD20375545007818D9 = {
@@ -663,6 +674,7 @@
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
 				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
+				4E92F34F2037B1CC0020C709 /* CommonCellViewModel.swift in Sources */,
 				4E92F31E20375CB30020C709 /* BaseViewController.swift in Sources */,
 				4E92F324203761D10020C709 /* ResponseModel.swift in Sources */,
 				4E92F3442037A8CD0020C709 /* TravelTableViewCell.swift in Sources */,

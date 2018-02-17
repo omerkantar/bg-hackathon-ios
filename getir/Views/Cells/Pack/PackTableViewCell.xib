@@ -107,7 +107,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="QU1-N4-ALK" id="bn9-QL-x7i"/>
-                <outlet property="locationLabel" destination="G1w-cV-Her" id="zgx-4w-k86"/>
+                <outlet property="directionLabel" destination="G1w-cV-Her" id="ZUo-lc-Wxy"/>
                 <outlet property="userContainerView" destination="iv2-ZN-1wy" id="8xB-KW-CeK"/>
                 <outlet property="userImageView" destination="uY9-eU-ZL9" id="TaW-qM-NGo"/>
                 <outlet property="usernameLabel" destination="nIc-qs-Lr9" id="HBj-ha-JWq"/>

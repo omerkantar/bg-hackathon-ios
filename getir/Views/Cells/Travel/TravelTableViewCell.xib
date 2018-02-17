@@ -115,7 +115,7 @@
             <connections>
                 <outlet property="containerView" destination="eiG-Zp-iXM" id="N5h-Mm-7KU"/>
                 <outlet property="dateLabel" destination="k1x-kN-Pgq" id="Ku3-yK-lLs"/>
-                <outlet property="locationLabel" destination="aZq-OL-Szc" id="LpW-5g-p4d"/>
+                <outlet property="directionLabel" destination="aZq-OL-Szc" id="r2s-da-Dp2"/>
                 <outlet property="userContainerView" destination="z2E-8y-hqD" id="D5C-ie-PC8"/>
                 <outlet property="userImageView" destination="gD5-Rq-bQb" id="fs9-9t-w8L"/>
                 <outlet property="usernameLabel" destination="pPR-R8-nRb" id="8om-kv-3de"/>
