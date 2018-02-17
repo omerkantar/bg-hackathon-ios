@@ -15,4 +15,11 @@ class PackTableViewController: CommonTableViewController {
         self.type = .pack
         super.viewDidLoad()
     }
+    
+    // MARK: - Load Data
+    override func loadData() {
+        self.request(target: .users, loadingView: self.tableView, isShowingError: true) { (response) in
+            
+        }
+    }
 }

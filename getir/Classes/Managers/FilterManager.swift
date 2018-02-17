@@ -1,5 +1,5 @@
 //
-//  PackCellViewModel.swift
+//  FilterManager.swift
 //  getir
 //
 //  Created by omer kantar on 17.02.2018.
@@ -8,6 +8,11 @@
 
 import UIKit
 
-class PackCellViewModel: CommonCellViewModel {
+protocol FilterProtocol {
+    
+}
 
+class FilterManager {
+
+    
 }

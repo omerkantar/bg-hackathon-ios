@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class PackTableViewModel: NSObject {
+class PackTableViewModel: BaseViewModel {
 
+    var cellVMs: [PackCellViewModel]?
+    
+    override func build(responseModel: ResponseModel) {
+        if let users = Mapper<UserModel>().mapArray(JSONObject: responseModel.data) {
+            
+        }
+    }
 }

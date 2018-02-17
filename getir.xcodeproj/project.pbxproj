@@ -33,6 +33,9 @@
 		4E92F35C2037C6270020C709 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F35B2037C6270020C709 /* String.swift */; };
 		4E92F3602037C6EE0020C709 /* PackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F35F2037C6EE0020C709 /* PackCellViewModel.swift */; };
 		4E92F3642037C9190020C709 /* PackFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3632037C9190020C709 /* PackFilterViewController.swift */; };
+		4E92F3662037F00A0020C709 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3652037F00A0020C709 /* FilterManager.swift */; };
+		4E92F3682037F0920020C709 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3672037F0920020C709 /* FilterModel.swift */; };
+		4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92F3692037F22A0020C709 /* BGTextField.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -90,6 +93,9 @@
 		4E92F35B2037C6270020C709 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4E92F35F2037C6EE0020C709 /* PackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCellViewModel.swift; sourceTree = "<group>"; };
 		4E92F3632037C9190020C709 /* PackFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackFilterViewController.swift; sourceTree = "<group>"; };
+		4E92F3652037F00A0020C709 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		4E92F3672037F0920020C709 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		4E92F3692037F22A0020C709 /* BGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGTextField.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 			children = (
 				4E92F3332037A0120020C709 /* Cells */,
 				4E92F328203764580020C709 /* LoadingView */,
+				4E92F3692037F22A0020C709 /* BGTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +190,6 @@
 			children = (
 				4E92F31F20375CC30020C709 /* ServiceManager.swift */,
 				4E92F32120375CDA0020C709 /* RequestTarget.swift */,
-				4E92F323203761D10020C709 /* ResponseModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			children = (
 				4E92F3512037C3190020C709 /* UserModel.swift */,
 				4E92F3542037C33A0020C709 /* BaseModel.swift */,
+				4E92F323203761D10020C709 /* ResponseModel.swift */,
+				4E92F3672037F0920020C709 /* FilterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				4E92F32C203769790020C709 /* LocationManager.swift */,
+				4E92F3652037F00A0020C709 /* FilterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -723,16 +732,19 @@
 				4E92F3602037C6EE0020C709 /* PackCellViewModel.swift in Sources */,
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,
+				4E92F36A2037F22A0020C709 /* BGTextField.swift in Sources */,
 				4E92F33C2037A6640020C709 /* StateTableViewCell.swift in Sources */,
 				4E92F32020375CC30020C709 /* ServiceManager.swift in Sources */,
 				4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */,
 				4E92F32220375CDA0020C709 /* RequestTarget.swift in Sources */,
 				4E92F32D203769790020C709 /* LocationManager.swift in Sources */,
 				4E92F33220379F870020C709 /* CommonTableViewController.swift in Sources */,
+				4E92F3682037F0920020C709 /* FilterModel.swift in Sources */,
 				4E92F34F2037B1CC0020C709 /* CommonCellViewModel.swift in Sources */,
 				4E92F31E20375CB30020C709 /* BaseViewController.swift in Sources */,
 				4E92F3642037C9190020C709 /* PackFilterViewController.swift in Sources */,
 				4E92F35C2037C6270020C709 /* String.swift in Sources */,
+				4E92F3662037F00A0020C709 /* FilterManager.swift in Sources */,
 				4E92F324203761D10020C709 /* ResponseModel.swift in Sources */,
 				4E92F3442037A8CD0020C709 /* TravelTableViewCell.swift in Sources */,
 				4E92F32A203764670020C709 /* LoadingView.swift in Sources */,
