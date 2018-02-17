@@ -42,16 +42,28 @@ class FilterViewController: BaseViewController {
     }
 
     @IBAction func filterButtonTapped() {
+        updateFilterModel()
         if let delegate = delegate {
-            delegate.updateFilterModel(filterModel)
+            delegate.updateFilterModel(self.filterModel)
         }
         self.dismissButtonTapped()
+    }
+    
+    func updateFilterModel() {
+        if let txt = self.weightTextField.text {
+            self.filterModel.weight = Int(txt)
+        }
     }
 }
 
 // MARK: - Build
 extension FilterViewController {
     func build() {
+        
+        if let delegate = delegate {
+            filterModel = delegate.filterModel()
+        }
+        
         scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 10.0, 0.0)
         
         fromTextField.delegate = self
@@ -60,8 +72,17 @@ extension FilterViewController {
         startDateTextField.delegate = self
         endDateTextField.delegate = self
         
+        fromTextField.text = self.filterModel.fromPlace
+        toTextField.text = self.filterModel.toPlace
+        
+        if let weight = filterModel.weight {
+            weightTextField.text = "\(weight)"
+        }
+        
+        startDateTextField.text = filterModel.sendDate?.string
+        endDateTextField.text = filterModel.endDate?.string
+        
         if let delegate = delegate {
-            filterModel = delegate.filterModel()
             switch delegate.filterType {
             case .pack:
                 self.dateInformationLabel.text = "Paketin gönderileceği tarihi giriniz."

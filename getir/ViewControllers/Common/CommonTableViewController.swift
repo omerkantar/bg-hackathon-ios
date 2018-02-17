@@ -85,7 +85,7 @@ extension CommonTableViewController: UITableViewDelegate {
         switch self.type {
         case .pack, .travel:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "selectRequestVC") as! SelectRequestViewController
-            vc.target = self.type == .pack ? .getMyPacks : .getMyTravels
+            vc.target = self.type == .pack ? .getMyTravels : .getMyPacks
             self.navigationController?.pushViewController(vc, animated: true)
             
         default:

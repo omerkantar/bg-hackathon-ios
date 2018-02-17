@@ -32,8 +32,10 @@ class SelectRequestViewController: BaseViewController {
         case .getMyPacks:
             self.isMyPacks = true
             self.addButton.setTitle("Paket ekle", for: .normal)
+            self.title = "Eşleşen Paketlerim"
             break
         case .getMyTravels:
+            self.title = "Eşleşen Gezilerim"
             self.addButton.setTitle("Gezi ekle", for: .normal)
             break
         default:

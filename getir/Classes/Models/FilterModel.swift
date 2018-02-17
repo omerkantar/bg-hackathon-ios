@@ -40,6 +40,7 @@ class FilterModel {
         if let date = sendDate {
             parameters["d"] = date.sortString
         }
+        
         if parameters.keys.count == 0 {
             return nil
         }
