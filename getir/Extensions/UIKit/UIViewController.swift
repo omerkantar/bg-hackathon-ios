@@ -58,3 +58,44 @@ extension UIViewController {
         
     }
 }
+
+
+// MARK: - TableView Build
+extension UIViewController {
+    func buildTableView(tableView: UITableView, cellIdentifier: String) {
+        
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(tableViewRefreshing), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
+    }
+    
+    @objc func tableViewRefreshing() {
+        
+    }
+}
+
+
+// MARK: - REquest
+extension UIViewController {
+    func request(target: RequestTarget, success: NetworkSuccessBlock?, failure: NetworkFailureBlock?) {
+
+        ServiceManager.request(target: target, success: { (model) in
+            if let success = success {
+                success(model)
+            }
+        }) { (error, model) in
+            if let failure = failure {
+                failure(error, model)
+            }
+        }
+    }
+}

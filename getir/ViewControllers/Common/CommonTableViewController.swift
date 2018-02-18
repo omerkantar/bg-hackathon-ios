@@ -113,14 +113,11 @@ extension CommonTableViewController: UITableViewDelegate {
 enum CommonTableViewType {
     case pack
     case travel
-    case state
     
     var cellIdentifier: String {
         switch self {
         case .pack:
             return String(describing: PackTableViewCell.self)
-        case .state:
-            return String(describing: StateTableViewCell.self)
         case .travel:
             return String(describing: TravelTableViewCell.self)
         }
