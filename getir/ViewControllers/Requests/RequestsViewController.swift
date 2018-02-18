@@ -32,6 +32,7 @@ class RequestsViewController: UIViewController {
     }
     
     func loadData() {
+        
         request(target: .getMyRequests, success: { (response) in
             self.loadedData(response: response)
         }) { (error, response) in
@@ -40,6 +41,14 @@ class RequestsViewController: UIViewController {
     }
     
     func loadedData(response: ResponseModel) {
+        
+        let views = self.tableView.subviews
+        for item in views {
+            if item is EmptyStateView {
+                item.removeFromSuperview()
+            }
+        }
+        
         if #available(iOS 10.0, *) {
             self.tableView.refreshControl?.endRefreshing()
         } 
@@ -48,9 +57,15 @@ class RequestsViewController: UIViewController {
             for item in list {
                 self.cellVMs?.append(CommonCellViewModel(requestStateModel: item))
             }
-            
-            self.tableView.reloadData()
+        
         }
+        
+        self.tableView.reloadData()
+        
+        if self.cellVMs!.count == 0 {
+            let _ = EmptyStateView.show(information:"Henüz görüntülenecek bir isteğiniz bulunmuyor 😢", parentView: self.tableView)
+        }
+       
     }
     
     override func tableViewRefreshing() {

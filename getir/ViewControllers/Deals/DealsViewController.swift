@@ -45,6 +45,14 @@ class DealsViewController: UIViewController {
     }
     
     func loadedData(response: ResponseModel) {
+        
+        let views = self.tableView.subviews
+        for item in views {
+            if item is EmptyStateView {
+                item.removeFromSuperview()
+            }
+        }
+        
         if #available(iOS 10.0, *) {
             self.tableView.refreshControl?.endRefreshing()
         }
@@ -55,7 +63,13 @@ class DealsViewController: UIViewController {
                 self.cellVM?.append(vm)
             }
         }
+        
+        if self.cellVM!.count == 0 {
+            let _ = EmptyStateView.show(information:"Henüz görüntülenecek bir antlaşmanız bulunmuyor 😢", parentView: self.tableView)
+        }
         self.tableView.reloadData()
+        
+        
     }
 
 }
@@ -84,20 +98,45 @@ extension DealsViewController: UITableViewDelegate {
         guard let vm = cellVM?[indexPath.row] else {
             return
         }
-//        
-//        if vm.is
-//        
-//        switch vm.model.statusType {
-//        case .waiting:
-//            
-//        case .moving:
-//            
-//        case .arrived:
-//            
-//        default:
-//            break
-//        }
+//
+        if let user = vm.model.travel?.user {
+            if !user.isMe {
+                return
+            }
+        }
         
+        switch vm.model.statusType {
+        case .waiting:
+            self.showAlertController(title: "Gezi Durumu Güncelle", message: "Geziye başladınız mı?", buttonTitles: ["Evet", "Henüz değil"], actionCompletion: { (title, index) in
+                
+                if title == "Evet" {
+                    self.putDealStatus(vm.model, status: .moving)
+                }
+            } )
+            break
+        case .moving:
+            self.showAlertController(title: "Gezi Durumu Güncelle", message: "Hedefe ulaştınız mı?", buttonTitles: ["Evet", "Henüz değil"], actionCompletion: { (title, index) in
+                
+                if title == "Evet" {
+                    self.putDealStatus(vm.model, status: .arrived)
+                }
+            } )
+
+            break
+        case .arrived:
+            break
+        default:
+            break
+        }
         
+    }
+    
+    func putDealStatus(_ deal: DealStateModel, status: DetalStatusType) {
+        
+        self.request(target: .putDeal(id: deal.id!, status: status), success: { (response) in
+            self.loadData()
+        }) { (error, response) in
+            self.loadData()
+        }
     }
 }

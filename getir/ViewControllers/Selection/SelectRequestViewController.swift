@@ -102,12 +102,12 @@ extension SelectRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let activity = viewModel.cellVMs?[indexPath.row].activityModel , let user = activity.user, let name = user.name else {
+        guard let activity = viewModel.cellVMs?[indexPath.row].activityModel , let user = activity.user, let name = selectedActivity?.user?.name else {
             return
         }
         
         
-        let message: String = isMyPacks  ? "Paketinizin ulaşımı için \(name)'ya öneride bulunmak ister misiniz?." : "Gezideki yolculuğunuzda \(name)'nin valizini taşınması için öneride bulunmak ister misin?"
+        let message: String = isMyPacks  ? "Valizinizi taşıması için \(name)'a öneride bulunmak ister misiniz?" : "Bu yolculuğunuzda \(name)'a valizini taşımak için öneride bulunmak ister misiniz?"
         
         self.showAlertController(title: "Emin misiniz?", message: message, buttonTitles: ["Öneride bulun", "İptal"], actionCompletion: { (title, index) in
             if title == "Öneride bulun" {
