@@ -84,7 +84,9 @@ class DealTableViewCell: UITableViewCell {
         lineView.layer.cornerRadius = 1.5
         
         
+        packOwnerImageView.layer.masksToBounds = true
         packOwnerImageView.layer.cornerRadius = packOwnerImageView.bounds.width / 2.0
+        travelOwnerImageView.layer.masksToBounds = true
         travelOwnerImageView.layer.cornerRadius = travelOwnerImageView.bounds.width / 2.0
 
     }
