@@ -14,6 +14,8 @@ class RequestsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var cellVMs: [CommonCellViewModel]?
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,14 @@ class RequestsViewController: UIViewController {
     }
     
     func loadData() {
+        request(target: .getMyRequests, success: { (response) in
+            self.loadedData(response: response)
+        }) { (error, response) in
+            
+        }
+    }
+    
+    func loadedData(response: ResponseModel) {
         
     }
 }

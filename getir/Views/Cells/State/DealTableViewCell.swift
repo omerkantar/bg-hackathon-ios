@@ -11,6 +11,7 @@ import AlamofireImage
 
 class DealTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var packInfoTitleLabel: UILabel!
     @IBOutlet weak var packOwnerNameLabel: UILabel!
     @IBOutlet weak var packSubtitleLabel: UILabel!
@@ -26,6 +27,8 @@ class DealTableViewCell: UITableViewCell {
     @IBOutlet weak var travelCircleView: UIView!
 
     @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var lineView: UIView!
     
     var viewModel: DealCellViewModel? {
         didSet {
@@ -43,6 +46,27 @@ class DealTableViewCell: UITableViewCell {
                     self.travelOwnerImageView.af_setImage(withURL: url)
                 }
                 
+                self.travelCircleView.isHidden = true
+                self.packCircleView.isHidden = true
+                
+                switch vm.model.statusType {
+                case .arrived:
+                    self.travelCircleView.isHidden = false
+                    self.packCircleView.isHidden = false
+                    self.packCircleView.backgroundColor = UIColor.gray
+                    self.travelCircleView.backgroundColor = UIColor.gray
+                case .moving:
+                    self.packCircleView.isHidden = false
+                    self.packCircleView.backgroundColor = UIColor.gray
+                    self.travelCircleView.backgroundColor = UIColor.white
+                    self.travelCircleView.layer.borderWidth = 1.5
+                case .waiting:
+                    self.packCircleView.layer.borderWidth = 1.5
+                    self.packCircleView.isHidden = false
+
+                default:
+                    break
+                }
             }
         }
     }
@@ -50,8 +74,18 @@ class DealTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.packCircleView.layer.borderColor = UIColor.gray.cgColor
+        self.travelCircleView.layer.borderColor = UIColor.gray.cgColor
+
+        containerView.layer.cornerRadius = 5.0
         packCircleView.layer.cornerRadius = packCircleView.bounds.width / 2.0
         travelCircleView.layer.cornerRadius = travelCircleView.bounds.width / 2.0
+
+        lineView.layer.cornerRadius = 1.5
+        
+        
+        packOwnerImageView.layer.cornerRadius = packOwnerImageView.bounds.width / 2.0
+        travelOwnerImageView.layer.cornerRadius = travelOwnerImageView.bounds.width / 2.0
 
     }
 

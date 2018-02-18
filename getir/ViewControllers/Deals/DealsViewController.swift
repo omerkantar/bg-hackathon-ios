@@ -41,24 +41,29 @@ class DealsViewController: UIViewController {
     }
     
     func loadedData(response: ResponseModel) {
-        if let list = Mapper<DealStateModel>().map(JSONObject: response.data) {
+        if let list = Mapper<DealStateModel>().mapArray(JSONObject: response.data) {
             self.cellVM = [DealCellViewModel]()
             for deal in list {
                 let vm = DealCellViewModel(model: deal)
                 self.cellVM?.append(vm)
             }
         }
+        self.tableView.reloadData()
     }
 
 }
 
 extension DealsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if let list = cellVM {
+            return list.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as! DealTableViewCell
+        cell.viewModel = cellVM?[indexPath.row]
         
         return cell
     }
@@ -67,5 +72,12 @@ extension DealsViewController: UITableViewDataSource {
 extension DealsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        guard let vm = cellVM?[indexPath.row] else {
+            return
+        }
+        
+        
     }
 }

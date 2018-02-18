@@ -16,6 +16,8 @@ class CommonCellViewModel {
     var directionText: String?
     var weightText: String?
     var dateText: String?
+    var requestUserType: String?
+    
     
     init(activity: ActivityModel) {
         self.activityModel = activity
@@ -23,7 +25,26 @@ class CommonCellViewModel {
         self.userPhotoUrl = activity.user?.photo?.imageURL
         self.directionText = activity.direction
         self.weightText = "\(activity.weight)\nkg"
+    }
+    
+    init(requestStateModel: RequestStateModel) {
         
+        var user: UserModel? = nil
+        
+        if let pack = requestStateModel.pack {
+            self.directionText = pack.direction + " \(pack.weight)kg"
+            user = pack.user
+            if pack.isMe {
+                self.requestUserType = "GEZGİN"
+                user = requestStateModel.travel?.user
+            }
+        }
+       
+        if let user = user {
+            
+            self.userPhotoUrl = user.photo?.imageURL
+            
+        }
         
     }
 }
