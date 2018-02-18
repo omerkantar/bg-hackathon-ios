@@ -59,6 +59,7 @@
 		4EB780BD2038F57600855856 /* RequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB780BB2038F57600855856 /* RequestsViewController.xib */; };
 		4EB780C020394D7D00855856 /* DealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB780BE20394D7D00855856 /* DealTableViewCell.swift */; };
 		4EB780C120394D7D00855856 /* DealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB780BF20394D7D00855856 /* DealTableViewCell.xib */; };
+		4EB780C420395E2800855856 /* DealCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB780C320395E2800855856 /* DealCellViewModel.swift */; };
 		4EC3D6CA20375545007818D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC3D6C920375545007818D9 /* AppDelegate.swift */; };
 		4EC3D6CF20375545007818D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6CD20375545007818D9 /* Main.storyboard */; };
 		4EC3D6D120375545007818D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC3D6D020375545007818D9 /* Assets.xcassets */; };
@@ -142,6 +143,7 @@
 		4EB780BB2038F57600855856 /* RequestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsViewController.xib; sourceTree = "<group>"; };
 		4EB780BE20394D7D00855856 /* DealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTableViewCell.swift; sourceTree = "<group>"; };
 		4EB780BF20394D7D00855856 /* DealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealTableViewCell.xib; sourceTree = "<group>"; };
+		4EB780C320395E2800855856 /* DealCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCellViewModel.swift; sourceTree = "<group>"; };
 		4EC3D6C620375545007818D9 /* getir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC3D6C920375545007818D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC3D6CE20375545007818D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 		4EB780C220395DC800855856 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				4EB780C320395E2800855856 /* DealCellViewModel.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				4E92F3602037C6EE0020C709 /* PackCellViewModel.swift in Sources */,
 				4E92F36C2037FDA10020C709 /* TextField.swift in Sources */,
 				4EB780C020394D7D00855856 /* DealTableViewCell.swift in Sources */,
+				4EB780C420395E2800855856 /* DealCellViewModel.swift in Sources */,
 				4E92F3582037C5920020C709 /* PackTableViewModel.swift in Sources */,
 				4E92F3832038551A0020C709 /* SelectRequestCellViewModel.swift in Sources */,
 				4E92F3402037A6880020C709 /* CommonTableViewCell.swift in Sources */,

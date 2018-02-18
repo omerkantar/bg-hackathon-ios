@@ -110,11 +110,16 @@ extension RequestTarget: TargetType {
         case .createDeal(let deal):
             return deal.parameters
             
+        
         case .createTravel(let travel):
             return travel.parameters
         case .createPack(let pack):
             return pack.parameters
-            
+        
+        case .getMyDeals, .getMyRequests:
+            if let id = UserModel.current.id {
+                return ["st": id]
+            }
         case .putRequest(_, let status):
             return ["status": status.rawValue]
         case .putDeal(_, let status):

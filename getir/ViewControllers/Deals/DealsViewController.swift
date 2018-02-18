@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
-fileprivate let kCellIdentifier = String(describing: RequestStateTableViewCell.self)
+fileprivate let kCellIdentifier = String(describing: DealTableViewCell.self)
 
 class DealsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var cellVM: [CommonCellViewModel]?
+    var cellVM: [DealCellViewModel]?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -33,10 +34,19 @@ class DealsViewController: UIViewController {
     
     func loadData() {
         request(target: .getMyDeals, success: { (response) in
-            
-            
+            self.loadedData(response: response)
         }) { (error, response) in
             
+        }
+    }
+    
+    func loadedData(response: ResponseModel) {
+        if let list = Mapper<DealStateModel>().map(JSONObject: response.data) {
+            self.cellVM = [DealCellViewModel]()
+            for deal in list {
+                let vm = DealCellViewModel(model: deal)
+                self.cellVM?.append(vm)
+            }
         }
     }
 
@@ -48,7 +58,7 @@ extension DealsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as! RequestStateTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as! DealTableViewCell
         
         return cell
     }

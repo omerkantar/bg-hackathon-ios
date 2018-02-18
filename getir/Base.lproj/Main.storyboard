@@ -388,6 +388,9 @@
                                                         <state key="normal" title="İstekler">
                                                             <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="requestsButtonTapped" destination="EfS-qy-QfC" eventType="touchUpInside" id="Y3C-jv-HFH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,6 +410,9 @@
                                                         <state key="normal" title="Anlaşmalar">
                                                             <color key="titleColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="dealsButtonTapped" destination="EfS-qy-QfC" eventType="touchUpInside" id="fwH-1J-b6L"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class DealTableViewCell: UITableViewCell {
 
@@ -26,7 +27,25 @@ class DealTableViewCell: UITableViewCell {
 
     @IBOutlet weak var statusLabel: UILabel!
     
-    
+    var viewModel: DealCellViewModel? {
+        didSet {
+            if let vm = viewModel {
+                self.statusLabel.text = vm.statusText
+                self.packOwnerNameLabel.text = vm.model.pack?.user?.name
+                self.packSubtitleLabel.text = vm.model.pack?.from
+                
+                if let url = vm.model.pack?.user?.photo?.imageURL {
+                    self.packOwnerImageView.af_setImage(withURL: url)
+                }
+                self.travelOwnerNameLabel.text = vm.model.travel?.user?.name
+                self.travelSubtitleLabel.text = vm.model.travel?.direction
+                if let url = vm.model.travel?.user?.photo?.imageURL {
+                    self.travelOwnerImageView.af_setImage(withURL: url)
+                }
+                
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,7 +15,7 @@ enum DetalStatusType: String {
     case none = "none"
     case waiting = "WAITING"
     case moving = "MOVING"
-    case ARRIVED = "ARRIVED"
+    case arrived = "ARRIVED"
 }
 
 class DealStateModel: ActivityStateModel {
