@@ -9,7 +9,13 @@
 import UIKit
 import ObjectMapper
 
+// omer
 fileprivate let kCurrentIdentifier = "5a8932e4f1b80cc4727c2b53"
+// furkan
+//fileprivate let kCurrentIdentifier = "5a8956ba21a6538131b9ceba"
+
+// omergormel
+//fileprivate let kCurrentIdentifier = "5a8932a9f1b80cc4727c2b52"
 
 class UserModel: BaseModel {
     
