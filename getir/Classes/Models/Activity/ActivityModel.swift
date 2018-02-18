@@ -59,4 +59,5 @@ class ActivityModel: BaseModel {
         }
         return params
     }
+    
 }

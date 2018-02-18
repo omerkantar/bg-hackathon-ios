@@ -11,13 +11,14 @@ import UIKit
 class CommonCellViewModel {
 
     var activityModel: ActivityModel
+    var requestStateModel: RequestStateModel?
     var usernameText: String?
     var userPhotoUrl: URL?
     var directionText: String?
     var weightText: String?
     var dateText: String?
     var requestUserType: String?
-    
+    var requestStatusButtonText: String?
     
     init(activity: ActivityModel) {
         self.activityModel = activity
@@ -28,23 +29,26 @@ class CommonCellViewModel {
     }
     
     init(requestStateModel: RequestStateModel) {
-        
+        self.requestStateModel = requestStateModel
+        self.activityModel = ActivityModel()
         var user: UserModel? = nil
         
+        
         if let pack = requestStateModel.pack {
-            self.directionText = pack.direction + " \(pack.weight)kg"
+            if let direction = pack.direction {
+                self.directionText = direction + " \(pack.weight)kg"
+            }
             user = pack.user
             if pack.isMe {
-                self.requestUserType = "GEZGİN"
+                self.requestUserType = " GEZGİN "
                 user = requestStateModel.travel?.user
+            } else {
+                self.requestUserType = " PAKET SAHİBİ "
             }
         }
        
         if let user = user {
-            
             self.userPhotoUrl = user.photo?.imageURL
-            
         }
-        
     }
 }

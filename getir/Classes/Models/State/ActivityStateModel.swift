@@ -19,6 +19,8 @@ class ActivityStateModel: BaseModel {
     var travel: TravelModel?
     var pack: PackModel?
     var status: String?
+    var sentTo: UserModel?
+    var sentFrom: UserModel?
     
     var type: ActivityStateType = ActivityStateType.request
     
@@ -27,6 +29,8 @@ class ActivityStateModel: BaseModel {
         travel <- map["travel"]
         pack <- map["pack"]
         status <- map["status"]
+        sentTo <- map["sent_to"]
+        sentFrom <- map["sent_from"]
     }
     
     
@@ -34,17 +38,17 @@ class ActivityStateModel: BaseModel {
         
         var params = [String: Any]()
         if let id = UserModel.current.id {
-            params["send_from"] = id
+            params["sent_from"] = id
         }
         
         if let pack = pack {
             if pack.isMe {
-                if let id = travel?.id {
-                    params["send_to"] = id
+                if let id = travel?.user?.id {
+                    params["sent_to"] = id
                 }
             } else {
-                if let id = pack.id {
-                    params["send_to"] = id
+                if let id = pack.user?.id {
+                    params["sent_to"] = id
                 }
             }
         }

@@ -102,8 +102,6 @@ extension CommonTableViewController: UITableViewDelegate {
             vc.target = self.type == .pack ? .getMyTravels : .getMyPacks
             vc.selectedActivity = self.cellVMs?[indexPath.row].activityModel
             self.navigationController?.pushViewController(vc, animated: true)
-            
-        default:
             break
         }
     }

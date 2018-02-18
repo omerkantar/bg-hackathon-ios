@@ -24,7 +24,7 @@ enum RequestTarget {
     
     case createPack(pack: ActivityModel)
     case createTravel(travel: TravelModel)
-    case createRequest(request: ActivityModel)
+    case createRequest(request: ActivityStateModel)
     case createDeal(deal: ActivityStateModel)
     
     case putRequest(id: String, status: RequestStatusType)
@@ -109,8 +109,6 @@ extension RequestTarget: TargetType {
             return request.parameters
         case .createDeal(let deal):
             return deal.parameters
-            
-        
         case .createTravel(let travel):
             return travel.parameters
         case .createPack(let pack):
@@ -121,9 +119,9 @@ extension RequestTarget: TargetType {
                 return ["st": id]
             }
         case .putRequest(_, let status):
-            return ["status": status.rawValue]
+            return ["status": status.rawValue as Any]
         case .putDeal(_, let status):
-            return ["status": status.rawValue]
+            return ["status": status.rawValue as Any]
             
         default:
             break

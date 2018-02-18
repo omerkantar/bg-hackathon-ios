@@ -40,7 +40,14 @@ class DealsViewController: UIViewController {
         }
     }
     
+    override func tableViewRefreshing() {
+        self.loadData()
+    }
+    
     func loadedData(response: ResponseModel) {
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl?.endRefreshing()
+        }
         if let list = Mapper<DealStateModel>().mapArray(JSONObject: response.data) {
             self.cellVM = [DealCellViewModel]()
             for deal in list {
@@ -77,6 +84,19 @@ extension DealsViewController: UITableViewDelegate {
         guard let vm = cellVM?[indexPath.row] else {
             return
         }
+//        
+//        if vm.is
+//        
+//        switch vm.model.statusType {
+//        case .waiting:
+//            
+//        case .moving:
+//            
+//        case .arrived:
+//            
+//        default:
+//            break
+//        }
         
         
     }

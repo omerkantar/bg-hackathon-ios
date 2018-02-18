@@ -118,8 +118,25 @@ extension SelectRequestViewController: UITableViewDelegate {
     }
     
     func createRequest(activityModel: ActivityModel) {
-        
-        self.request(target: .createRequest(request: activityModel)) { (response) in
+        let model = ActivityStateModel()
+        let pack = PackModel()
+        let travel = TravelModel()
+        if self.isMyPacks {
+            pack.user = activityModel.user
+            pack.id = activityModel.id
+            travel.user = selectedActivity?.user
+            travel.id = selectedActivity?.id
+        } else {
+            pack.user = selectedActivity?.user
+            pack.id = selectedActivity?.id
+            travel.user = activityModel.user
+            travel.id = activityModel.id
+        }
+
+        model.pack = pack
+        model.travel = travel
+
+        self.request(target: .createRequest(request: model)) { (response) in
             
             self.navigationController?.popViewController(animated: true)
             NotificationCenter.default.post(name: Notification.Name.pendingRequest, object: nil)

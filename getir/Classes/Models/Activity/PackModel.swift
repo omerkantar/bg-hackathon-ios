@@ -12,8 +12,8 @@ import ObjectMapper
 class PackModel: ActivityModel {
 
     var isMe: Bool {
-        if let currentId = UserModel.current.id, let thatId = id {
-            return currentId == thatId
+        if let user = user {
+            return user.isMe
         }
         return false
     }

@@ -68,9 +68,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrc-Hm-jq6">
-                                <rect key="frame" x="281" y="68" width="58" height="30"/>
+                                <rect key="frame" x="239" y="68" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="58" id="sOL-g4-mXq"/>
+                                    <constraint firstAttribute="width" constant="100" id="sOL-g4-mXq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Cevapla">
@@ -109,6 +109,7 @@
                 <outlet property="containerView" destination="5rD-Sv-EVT" id="LhD-It-gNy"/>
                 <outlet property="directionLabel" destination="iW6-Ge-e50" id="Sz7-Ee-vxk"/>
                 <outlet property="requestTypeLabel" destination="eRK-L0-TNa" id="y3T-70-duz"/>
+                <outlet property="statusButton" destination="Yrc-Hm-jq6" id="8wN-6F-Guh"/>
                 <outlet property="userContainerView" destination="OU6-Oz-UtV" id="o8X-or-n2r"/>
                 <outlet property="userImageView" destination="s1H-k4-oFe" id="bXg-x2-GmJ"/>
                 <outlet property="usernameLabel" destination="ae5-2F-FcC" id="jMP-MR-jm4"/>

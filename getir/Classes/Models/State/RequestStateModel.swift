@@ -13,7 +13,34 @@ enum RequestStatusType: String {
     case none = "none"
     case pending = "PENDING"
     case approved = "APPROVED"
-    case rejected = "REJECTTED"
+    case rejected = "REJECTED"
+    
+    var buttonText: String {
+        switch self {
+        case .approved:
+            return "Onaylandı"
+        case .pending:
+            return "Cevapla"
+        case .rejected:
+            return "Reject"
+        default:
+            break
+        }
+        return ""
+    }
+    
+    var color: UIColor {
+        switch self {
+        case .approved:
+            return .orange
+        case .rejected:
+            return .red
+            
+        default:
+            break
+        }
+        return UIColor.gray
+    }
     
 }
 
