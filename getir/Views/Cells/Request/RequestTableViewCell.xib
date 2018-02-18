@@ -62,6 +62,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="Cpb-GK-x58" id="90o-gi-e3c"/>
+                <outlet property="dateLabel" destination="kw1-3Q-cR5" id="jKR-87-lno"/>
+                <outlet property="directionLabel" destination="4SG-1U-gS3" id="6W9-6i-DUI"/>
+                <outlet property="weightLabel" destination="Jxb-2n-XpF" id="7BM-Gx-bHr"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

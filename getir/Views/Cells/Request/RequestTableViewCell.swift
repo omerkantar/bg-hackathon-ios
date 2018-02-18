@@ -13,7 +13,7 @@ class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var directionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    
+    @IBOutlet weak var containerView: UIView!
     
     var viewModel: SelectRequestCellViewModel? {
         didSet {
@@ -22,6 +22,7 @@ class RequestTableViewCell: UITableViewCell {
                 let dateLabel = dateLabel,
                 let weightLabel = weightLabel {
                 
+                containerView.layer.cornerRadius = 3.0
                 directionLabel.text = vm.directionText
                 dateLabel.text = vm.dateText
                 weightLabel.text = vm.weightText
@@ -32,6 +33,7 @@ class RequestTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

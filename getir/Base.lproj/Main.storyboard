@@ -361,7 +361,7 @@
         <!--Güncel Durumlar-->
         <scene sceneID="1kW-J5-ZYr">
             <objects>
-                <viewController id="EfS-qy-QfC" customClass="StateTableViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EfS-qy-QfC" customClass="StateViewController" customModule="getir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRC-X0-wLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +507,7 @@
             <objects>
                 <navigationController id="HcW-bg-Vxd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Durumlar" image="Information Icon" id="gba-ZW-6fh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NgR-c7-AfC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NgR-c7-AfC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>

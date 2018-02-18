@@ -17,5 +17,9 @@ class RequestsViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    // MARK: - Build TableView
+    func buildTableView() {
+        
+    }
 
 }

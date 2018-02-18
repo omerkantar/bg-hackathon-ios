@@ -18,5 +18,10 @@ class DealsViewController: UIViewController {
     }
     
     
+    // MARK: - Build TableView
+    func buildTableView() {
+        
+    }
+    
 
 }

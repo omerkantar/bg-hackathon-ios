@@ -101,7 +101,33 @@ extension SelectRequestViewController: UITableViewDataSource {
 extension SelectRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let activity = viewModel.cellVMs?[indexPath.row].activityModel , let user = activity.user, let name = user.name else {
+            return
+        }
+        
+        
+        let message: String = isMyPacks  ? "Paketinizin ulaşımı için \(name)'ya öneride bulunmak ister misiniz?." : "Gezideki yolculuğunuzda \(name)'nin valizini taşınması için öneride bulunmak ister misin?"
+        
+        self.showAlertController(title: "Emin misiniz?", message: message, buttonTitles: ["Öneride bulun", "İptal"], actionCompletion: { (title, index) in
+            if title == "Öneride bulun" {
+                self.createRequest(activityModel: activity)
+            }
+        })
+       
     }
+    
+    func createRequest(activityModel: ActivityModel) {
+        
+        self.request(target: .createRequest(request: activityModel)) { (response) in
+            
+            self.navigationController?.popViewController(animated: true)
+            NotificationCenter.default.post(name: Notification.Name.pendingRequest, object: nil)
+        }
+    }
+    
+    
+    
 }
 
 // MARK: - Load

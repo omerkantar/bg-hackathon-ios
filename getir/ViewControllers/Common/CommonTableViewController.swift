@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+extension Notification.Name {
+    static let pendingRequest = Notification.Name("pendingRequest")
+}
 
 class CommonTableViewController: BaseViewController {
 
@@ -25,6 +27,7 @@ class CommonTableViewController: BaseViewController {
         super.viewDidLoad()
         buildTableView()
         loadData()
+        NotificationCenter.default.addObserver(self, selector: #selector(CommonTableViewController.pendingRequest), name: Notification.Name.pendingRequest, object: nil)
     }
     
     // MARK: - Build
@@ -48,6 +51,17 @@ class CommonTableViewController: BaseViewController {
     
     @objc func refreshingData() {
         self.refreshControl.beginRefreshing()
+    }
+    
+    
+    // MARK: - Pending Request
+    @objc func pendingRequest() {
+        self.tabBarController?.selectedIndex = 2
+        if let nc = self.tabBarController?.viewControllers?[2] as? UINavigationController {
+            if let vc = nc.viewControllers.first as? StateViewController {
+                vc.loadData()
+            }
+        }
     }
 }
 
